@@ -13,3 +13,8 @@ print("\n===========================================")
 print("Menampilkan 3 baris pertama dari DataFrame:")
 print("===========================================")
 print(df.head(3)) # Menampilkan 3 baris pertama dari DataFrame
+
+print("\n===========================================")
+print("Informasi tentang DataFrame:")
+print("===========================================")
+print(df.info()) # Menampilkan informasi ringkas tentang DataFrame, termasuk tipe data dan jumlah nilai non-null
