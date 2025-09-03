@@ -6,5 +6,10 @@ data = {
     "Gender": ["Female", "Male", "Male", "Male", "Female"]
 }
 
-df = pd.DataFrame(data)
-print(df)
+df = pd.DataFrame(data) # Membuat DataFrame dari dictionary, DataFrame adalah struktur data 2D seperti tabel
+print(df) # Menampilkan DataFrame ke layar
+
+print("\n===========================================")
+print("Menampilkan 3 baris pertama dari DataFrame:")
+print("===========================================")
+print(df.head(3)) # Menampilkan 3 baris pertama dari DataFrame
