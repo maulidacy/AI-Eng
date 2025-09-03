@@ -37,3 +37,9 @@ print("Ambil semua data Gender male:")
 print("==============================")
 df_gender_male = df[df["Gender"] == "Male"] # Memfilter DataFrame untuk hanya menyertakan baris di mana kolom "Gender" bernilai "Male"
 print(df_gender_male) # Menampilkan DataFrame yang sudah difilter
+
+print("\n========================================")
+print("Tambah kolom baru 'city':")
+print("========================================")
+df["City"] = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"] # Menambahkan kolom baru bernama "City" ke DataFrame
+print(df) # Menampilkan DataFrame yang sudah diperbarui dengan kolom baru
