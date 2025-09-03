@@ -43,3 +43,10 @@ print("Tambah kolom baru 'city':")
 print("========================================")
 df["City"] = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"] # Menambahkan kolom baru bernama "City" ke DataFrame
 print(df) # Menampilkan DataFrame yang sudah diperbarui dengan kolom baru
+
+print("\n================================")
+print("Tambah kolom baru 'Occupation':")
+print("================================")
+
+df["Occupation"] = ["Engineer", "Doctor", "Artist", "Lawyer", "Scientist"] # Menambahkan kolom baru bernama "Occupation" ke DataFrame
+print(df) # Menampilkan DataFrame yang sudah diperbarui dengan kolom baru
