@@ -47,6 +47,11 @@ print(df) # Menampilkan DataFrame yang sudah diperbarui dengan kolom baru
 print("\n================================")
 print("Tambah kolom baru 'Occupation':")
 print("================================")
-
 df["Occupation"] = ["Engineer", "Doctor", "Artist", "Lawyer", "Scientist"] # Menambahkan kolom baru bernama "Occupation" ke DataFrame
+print(df) # Menampilkan DataFrame yang sudah diperbarui dengan kolom baru
+
+print("\n===============================")
+print("Tambah kolom baru 'Salary':")
+print("===============================")
+df["Salary"] = [7000000, 4000000, 50000000, 9000000, 6000000] # Menambahkan kolom baru bernama "Salary" ke DataFrame
 print(df) # Menampilkan DataFrame yang sudah diperbarui dengan kolom baru
