@@ -9,7 +9,7 @@ data = {
 df = pd.DataFrame(data) # Membuat DataFrame dari dictionary, DataFrame adalah struktur data 2D seperti tabel
 print(df) # Menampilkan DataFrame ke layar
 
-#----------------------------------------------Latihan DASAR-------------------------------------------------
+#----------------------------------------------DASAR-------------------------------------------------
 print("\n===========================================")
 print("Menampilkan 3 baris pertama dari DataFrame:")
 print("===========================================")
@@ -29,3 +29,11 @@ print("\n========================")
 print("Hitung rata-rata usia:")
 print("========================")
 print(df["Age"].mean()) # Menghitung dan menampilkan rata-rata usia dari kolom "Age"
+
+#----------------------------------------------Indexing and Filtering-------------------------------------------------
+
+print("\n==============================")
+print("Ambil semua data Gender male:")
+print("==============================")
+df_gender_male = df[df["Gender"] == "Male"] # Memfilter DataFrame untuk hanya menyertakan baris di mana kolom "Gender" bernilai "Male"
+print(df_gender_male) # Menampilkan DataFrame yang sudah difilter
