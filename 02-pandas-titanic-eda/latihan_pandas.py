@@ -49,7 +49,7 @@ print(df) # Menampilkan DataFrame yang sudah diperbarui dengan kolom baru
 print("\n================================")
 print("Tambah kolom baru 'Occupation':")
 print("================================")
-df["Occupation"] = ["Engineer", "Doctor", "Artist", "Lawyer", "Scientist"] # Menambahkan kolom baru bernama "Occupation" ke DataFrame
+df["Occupation"] = ["Engineer", "Doctor", "Engineer", "Lawyer", "Scientist"] # Menambahkan kolom baru bernama "Occupation" ke DataFrame
 print(df) # Menampilkan DataFrame yang sudah diperbarui dengan kolom baru
 
 print("\n===============================")
@@ -99,6 +99,12 @@ print("Ambil semua orang dengan Salary > 5000000:")
 print("==========================================")
 df_salary_above_5000000 = df[df["Salary"] > 5000000] # Memfilter DataFrame untuk hanya menyertakan baris di mana kolom "Salary" lebih besar dari 5000000
 print(df_salary_above_5000000) # Menampilkan DataFrame yang sudah difilter
+
+print("\n===================================================================")
+print("Ambil semua orang dengan Occupation 'Engineer' dan City 'New York':")
+print("===================================================================")
+df_engineer_in_newyork = df[(df["Occupation"] == "Engineer") & (df["City"] == "New York")] # Memfilter DataFrame untuk hanya menyertakan baris di mana kolom "Occupation" bernilai "Engineer" dan kolom "City" bernilai "New York"
+print(df_engineer_in_newyork) # Menampilkan DataFrame yang sudah difilter
 
 
 
