@@ -64,8 +64,8 @@ print("Menampilkan nama kolom:")
 print("========================")
 print(df.columns) # Menampilkan nama-nama kolom dalam DataFrame
 
-print("\n========================")
-print("Tampilkan isi kolom:")
-print("========================")
-for name in df.columns:
-    print(name)
+print("\n======================================")
+print("Tampilkan isi kolom berdasarkan nama :")
+print("======================================")
+print(df["Name"]) # Menampilkan isi kolom "Name" dari DataFrame
+print(df["City"]) # Menampilkan isi kolom "City" dari DataFrame
