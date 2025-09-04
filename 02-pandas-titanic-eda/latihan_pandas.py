@@ -106,5 +106,35 @@ print("===================================================================")
 df_engineer_in_newyork = df[(df["Occupation"] == "Engineer") & (df["City"] == "New York")] # Memfilter DataFrame untuk hanya menyertakan baris di mana kolom "Occupation" bernilai "Engineer" dan kolom "City" bernilai "New York"
 print(df_engineer_in_newyork) # Menampilkan DataFrame yang sudah difilter
 
+#----------------------------------------------OPERASI KOLOM-------------------------------------------------
+
+print("\n===================================")
+print("Tambah kolom Tax (10% dari Salary):")
+print("====================================")
+df["Tax"] = df["Salary"] * 0.1 # Menambahkan kolom baru bernama "Tax" yang merupakan 10% dari kolom "Salary"
+print(df) # Menampilkan DataFrame yang sudah diperbarui dengan kolom baru
+
+print("\n=============================================")
+print("Tambah kolom Age_Group (Young, Adult, Senior:")
+print("=============================================")
+# Menambahkan kolom baru 'age_group'
+df["Age_Group"] = df["Age"].apply(
+    lambda x: "Young" if x < 25 else ("Adult" if x <= 35 else "Senior")
+    )
+print(df) # Menampilkan DataFrame yang sudah diperbarui dengan kolom baru
+
+# versi lebih gampang dibaca, bisa juga ditulis tanpa lambda:
+# Fungsi untuk mengelompokkan umur
+def kategori_umur(x):
+    if x < 25:
+        return "Young"
+    elif x <= 35:
+        return "Adult"
+    else:
+        return "Senior"
+
+# Tambahkan kolom 'age_group' dengan apply
+df["age_group"] = df["Age"].apply(kategori_umur)
+# print(df) # Menampilkan DataFrame yang sudah diperbarui dengan kolom baru
 
 
