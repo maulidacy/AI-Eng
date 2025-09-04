@@ -69,3 +69,10 @@ print("Tampilkan isi kolom berdasarkan nama :")
 print("======================================")
 print(df["Name"]) # Menampilkan isi kolom "Name" dari DataFrame
 print(df["City"]) # Menampilkan isi kolom "City" dari DataFrame
+
+print("\n=================================")
+print("Ambil baris pertama dan terakhir:")
+print("=================================")
+print(df.iloc[[0, -1]]) # Mengambil dan menampilkan baris pertama dan terakhir dari DataFrame (iloc itu index location)
+
+
