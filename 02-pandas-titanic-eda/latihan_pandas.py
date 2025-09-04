@@ -31,7 +31,7 @@ print("========================")
 print(df["Age"].mean()) # Menghitung dan menampilkan rata-rata usia dari kolom "Age"
 
 
-#----------------------------------------------Indexing-------------------------------------------------
+#----------------------------------------------INDEXING-------------------------------------------------
 
 
 print("\n==============================")
@@ -79,15 +79,26 @@ print("\n=================================")
 print(df.iloc[1:5]) # Menggunakan Range untuk Mengambil dan menampilkan baris ke 2 sampai 4 (index 1 sampai 3) dari DataFrame
 
 
-#----------------------------------------------Filtering-------------------------------------------------
+#----------------------------------------------FILTERING-------------------------------------------------
 
 
-print("\n=================================")
+print("\n===================================")
 print("Ambil semua orang dengan usia > 25:")
-print("=================================")
+print("===================================")
 df_age_above_25 = df[df["Age"] > 25] # Memfilter DataFrame untuk hanya menyertakan baris di mana kolom "Age" lebih besar dari 25
 print(df_age_above_25) # Menampilkan DataFrame yang sudah difilter
 
+print("\n=================================")
+print("Ambil semua orang gender female:")
+print("=================================")
+df_gender_female = df[df["Gender"] == "Female"] # Memfilter DataFrame untuk hanya menyertakan baris di mana kolom "Gender" bernilai "Female"
+print(df_gender_female) # Menampilkan DataFrame yang sudah difilter
+
+print("\n==========================================")
+print("Ambil semua orang dengan Salary > 5000000:")
+print("==========================================")
+df_salary_above_5000000 = df[df["Salary"] > 5000000] # Memfilter DataFrame untuk hanya menyertakan baris di mana kolom "Salary" lebih besar dari 5000000
+print(df_salary_above_5000000) # Menampilkan DataFrame yang sudah difilter
 
 
 
