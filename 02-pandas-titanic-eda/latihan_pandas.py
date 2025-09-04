@@ -30,7 +30,9 @@ print("Hitung rata-rata usia:")
 print("========================")
 print(df["Age"].mean()) # Menghitung dan menampilkan rata-rata usia dari kolom "Age"
 
+
 #----------------------------------------------Indexing and Filtering-------------------------------------------------
+
 
 print("\n==============================")
 print("Ambil semua data Gender male:")
@@ -55,3 +57,15 @@ print("Tambah kolom baru 'Salary':")
 print("===============================")
 df["Salary"] = [7000000, 4000000, 50000000, 9000000, 6000000] # Menambahkan kolom baru bernama "Salary" ke DataFrame
 print(df) # Menampilkan DataFrame yang sudah diperbarui dengan kolom baru
+
+#menampilkan nama kolom
+print("\n========================")
+print("Menampilkan nama kolom:")
+print("========================")
+print(df.columns) # Menampilkan nama-nama kolom dalam DataFrame
+
+print("\n========================")
+print("Tampilkan isi kolom:")
+print("========================")
+for name in df.columns:
+    print(name)
