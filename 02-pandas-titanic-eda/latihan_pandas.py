@@ -75,4 +75,7 @@ print("Ambil baris pertama dan terakhir:")
 print("=================================")
 print(df.iloc[[0, -1]]) # Mengambil dan menampilkan baris pertama dan terakhir dari DataFrame (iloc itu index location)
 
+print("\n=================================")
+print(df.iloc[1:5]) # Menggunakan Range untuk Mengambil dan menampilkan baris ke 2 sampai 4 (index 1 sampai 3) dari DataFrame
+
 
