@@ -137,4 +137,8 @@ def kategori_umur(x):
 df["age_group"] = df["Age"].apply(kategori_umur)
 # print(df) # Menampilkan DataFrame yang sudah diperbarui dengan kolom baru
 
+print(f"\nRata-rata gaji: {df['Salary'].mean()}") # Menampilkan rata-rata gaji ke layar
+print(f"Salary tertinggi: {df['Salary'].max()}") # Menampilkan gaji tertinggi ke layar
+print(f"Salary terendah: {df['Salary'].min()}") # Menampilkan gaji terendah ke layar
+
 
