@@ -142,8 +142,23 @@ print(f"Salary tertinggi: {df['Salary'].max()}") # Menampilkan gaji tertinggi ke
 print(f"Salary terendah: {df['Salary'].min()}") # Menampilkan gaji terendah ke layar
 
 
-print("\n========================================")
+print("\n==================================")
 print("Rata-rata salary berdasarkan city:")
-print("========================================")
+print("==================================")
 avg_salary_by_city = df.groupby("City")["Salary"].mean() # Mengelompokkan DataFrame berdasarkan kolom "City" dan menghitung rata-rata dari kolom "Salary" untuk setiap kota
 print(avg_salary_by_city) # Menampilkan rata-rata gaji berdasarkan kota
+
+print("\n========================================")
+print("Rata-rata salary berdasarkan occupation:")
+print("========================================")
+avg_salary_by_occupation = df.groupby("Occupation")["Salary"].mean() # Mengelompokkan DataFrame berdasarkan kolom "Occupation" dan menghitung rata-rata dari kolom "Salary" untuk setiap pekerjaan
+print(avg_salary_by_occupation) # Menampilkan rata-rata gaji berdasarkan pekerjaan
+
+print("\n=================================")
+print("Jumlah orang berdasarkan Gender:")
+print("=================================")
+count_by_gender = df.groupby("Gender").size() # Mengelompokkan DataFrame berdasarkan kolom "Gender" dan menghitung jumlah baris untuk setiap jenis kelamin
+print(count_by_gender) # Menampilkan jumlah orang berdasarkan jenis kelamin
+
+
+
