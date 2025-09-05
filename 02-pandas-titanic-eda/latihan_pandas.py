@@ -171,6 +171,12 @@ print("=================================")
 top_3_salary = df.nlargest(3, "Salary") # Mengambil 3 baris dengan nilai tertinggi di kolom "Salary"
 print(top_3_salary) # Menampilkan 3 orang dengan gaji tertinggi
 
+print("\n============================================================")
+print("Total salary yang harus dibayar perusahaan tiap occupation:")
+print("============================================================")
+total_salary_by_occupation = df.groupby("Occupation")["Salary"].sum() # Mengelompokkan DataFrame berdasarkan kolom "Occupation" dan menghitung total dari kolom "Salary" untuk setiap pekerjaan
+print(total_salary_by_occupation) # Menampilkan total gaji yang harus dibayar perusahaan untuk setiap pekerjaan
+
 
 
 
