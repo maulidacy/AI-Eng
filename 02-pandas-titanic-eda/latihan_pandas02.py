@@ -14,6 +14,8 @@ df = pd.DataFrame(data)
 # Lihat data
 print(df)
 
+#----------------------------------------INDEXING (Ambil kolom/baris tertentu)----------------------------------------
+
 # Kolom tunggal
 names = df["Name"]
 
@@ -27,10 +29,14 @@ last_row  = df.iloc[-1]
 # Baris ke-2 s.d. ke-4 (ingat: iloc eksklusif di ujung)
 rows_2_to_4 = df.iloc[1:4]
 
+#-----------------------------------------FILTERING (Seleksi baris pakai kondisi)----------------------------------------
+
 age_over_25 = df[df["Age"] > 25]
 female_only = df[df["Gender"] == "Female"]
 salary_over_5m = df[df["Salary"] > 5_000_000]
 eng_jkt = df[(df["Occupation"] == "Engineer") & (df["City"] == "Jakarta")]
+
+#-----------------------------------------OPERASI KOLOM (Buat kolom baru, ubah, agregasi, sorting)----------------------------------------
 
 # Pajak 10% dari gaji
 df["Tax"] = df["Salary"] * 0.10
@@ -43,6 +49,7 @@ def bucket_age(a):
 
 df["Age_Group"] = df["Age"].apply(bucket_age)
 
+#-----------------------------------------GROUPING (Agregasi per kategori)----------------------------------------
 # Rata-rata, min, max gaji
 avg_salary = df["Salary"].mean()
 min_salary = df["Salary"].min()
@@ -53,6 +60,7 @@ avg_salary_by_occ  = df.groupby("Occupation")["Salary"].mean()
 count_by_gender    = df["Gender"].value_counts()
 avg_age_by_occ     = df.groupby("Occupation")["Age"].mean()
 
+#-----------------------------------------CHALLENGE (Latihan lanjutan)----------------------------------------
 # 3 gaji tertinggi
 top3_salary = df.nlargest(3, "Salary")
 
