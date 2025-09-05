@@ -142,3 +142,8 @@ print(f"Salary tertinggi: {df['Salary'].max()}") # Menampilkan gaji tertinggi ke
 print(f"Salary terendah: {df['Salary'].min()}") # Menampilkan gaji terendah ke layar
 
 
+print("\n========================================")
+print("Rata-rata salary berdasarkan city:")
+print("========================================")
+avg_salary_by_city = df.groupby("City")["Salary"].mean() # Mengelompokkan DataFrame berdasarkan kolom "City" dan menghitung rata-rata dari kolom "Salary" untuk setiap kota
+print(avg_salary_by_city) # Menampilkan rata-rata gaji berdasarkan kota
