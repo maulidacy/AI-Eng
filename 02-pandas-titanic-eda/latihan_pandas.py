@@ -160,5 +160,10 @@ print("=================================")
 count_by_gender = df.groupby("Gender").size() # Mengelompokkan DataFrame berdasarkan kolom "Gender" dan menghitung jumlah baris untuk setiap jenis kelamin
 print(count_by_gender) # Menampilkan jumlah orang berdasarkan jenis kelamin
 
+print("\n=============================")
+print("Rata-rata Age per occupation:")
+print("=============================")
+print(df.groupby("Occupation")["Age"].mean()) # Mengelompokkan DataFrame berdasarkan kolom "Occupation" dan menghitung rata-rata dari kolom "Age" untuk setiap pekerjaan
+
 
 
