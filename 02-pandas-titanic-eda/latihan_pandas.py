@@ -183,7 +183,11 @@ print("=============================================================")
 sorted_by_salary = df.sort_values(by="Salary", ascending=False) # Mengurutkan DataFrame berdasarkan kolom "Salary" dari yang tertinggi ke terendah
 print(sorted_by_salary) # Menampilkan DataFrame yang sudah diurutkan berdasarkan gaji
 
-print("\n========================================")
+print("\n===========================================")
+print("Persentase jumlah orang berdasarkan Gender:")
+print("===========================================")
+percentage_by_gender = df.groupby("Gender").size() / len(df) * 100 # Menghitung persentase jumlah orang berdasarkan jenis kelamin
+print(percentage_by_gender) # Menampilkan persentase jumlah orang berdasarkan jenis kelamin
 
 
 
