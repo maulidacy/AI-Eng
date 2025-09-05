@@ -165,5 +165,13 @@ print("Rata-rata Age per occupation:")
 print("=============================")
 print(df.groupby("Occupation")["Age"].mean()) # Mengelompokkan DataFrame berdasarkan kolom "Occupation" dan menghitung rata-rata dari kolom "Age" untuk setiap pekerjaan
 
+print("\n=================================")
+print("3 orang dengan Salary tertinggi:")
+print("=================================")
+top_3_salary = df.nlargest(3, "Salary") # Mengambil 3 baris dengan nilai tertinggi di kolom "Salary"
+print(top_3_salary) # Menampilkan 3 orang dengan gaji tertinggi
+
+
+
 
 
