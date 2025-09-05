@@ -177,6 +177,13 @@ print("============================================================")
 total_salary_by_occupation = df.groupby("Occupation")["Salary"].sum() # Mengelompokkan DataFrame berdasarkan kolom "Occupation" dan menghitung total dari kolom "Salary" untuk setiap pekerjaan
 print(total_salary_by_occupation) # Menampilkan total gaji yang harus dibayar perusahaan untuk setiap pekerjaan
 
+print("\n=============================================================")
+print("DataFrame diurutkan berdasarkan salary tertinggi ke terendah:")
+print("=============================================================")
+sorted_by_salary = df.sort_values(by="Salary", ascending=False) # Mengurutkan DataFrame berdasarkan kolom "Salary" dari yang tertinggi ke terendah
+print(sorted_by_salary) # Menampilkan DataFrame yang sudah diurutkan berdasarkan gaji
+
+print("\n========================================")
 
 
 
