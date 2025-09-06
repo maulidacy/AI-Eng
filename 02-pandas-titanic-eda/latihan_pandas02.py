@@ -12,6 +12,18 @@ print(df)
 print("\nAmbil kolom 'Name':")
 print(df["Name"])
 
+print("\nAmbil kolom 'Name' dan 'Age':")    
+print(df[["Name","Age"]])
+
+print("\nAmbil baris pertama:")
+print(df.iloc[0])
+
+print("\nAmbil baris terakhir:")
+print(df.iloc[-1])
+
+print("\nAmbil baris ke-2 s.d. ke-5:")
+print(df.iloc[1:5])
+
 exit()
 
 #-------------------------------------------------------------------------------------------------------------
