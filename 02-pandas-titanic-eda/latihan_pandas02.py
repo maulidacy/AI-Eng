@@ -1,5 +1,18 @@
 import pandas as pd
 
+data = {
+    "Name": ["Ayu", "Budi", "Citra", "Dodi", "Eka", "Fajar"],
+    "Age": [23, 31, 27, 22, 36, 29],
+    "City": ["Jakarta", "Bandung", "Jakarta", "Surabaya", "Jakarta", "Bandung"],
+}
+
+df = pd.DataFrame(data)
+print(df)
+
+exit()
+
+#-------------------------------------------------------------------------------------------------------------
+
 # 1) Data mini untuk latihan (silakan ganti dengan data kamu)
 data = {
     "Name": ["Ayu","Budi","Citra","Dodi","Eka","Fajar"],
