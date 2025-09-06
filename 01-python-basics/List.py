@@ -1,3 +1,31 @@
+#------------------------Hitung Rata-rata, Max, Min tanpa Fungsi Bawaan------------------------
+ages = [23, 31, 27, 22, 36]
+total = 0
+jumlah_data = len(ages)
+
+#Hitung rata-rata manual, max, min tanpa fungsi bawaan
+for angka in ages:
+    total += angka
+    rata_rata = total/jumlah_data
+
+#cari nilai max manual
+max_value = ages[0] #ambil angka pertama sebagai nilai awal
+for angka in ages:
+    if angka > max_value:
+        max_value = angka
+
+#cari nilai min manual
+min_value = ages[0] #ambil angka pertama sebagai nilai awal
+for angka in ages:
+    if angka < min_value:
+        min_value = angka
+    
+print("Rata-rata:", rata_rata)
+print("Nilai maksimum:", max_value)
+print("Nilai minimum:", min_value)
+exit()
+
+#--------------------------------Menebak Angka--------------------------------
 angka_rahasia = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 sudah_benar = False
 tebakan = []
