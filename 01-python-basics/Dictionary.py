@@ -4,6 +4,25 @@
 # Nilai dari key bisa berupa tipe data apa saja, termasuk string, integer, list, atau bahkan dictionary itu sendiri.
 # Untuk mengakses nilai, kita menggunakan key yang sesuai.
 
+import pandas as pd
+
+person = {
+    "Name" : ["Maul"], # pakai list
+    "Age" : [20],
+    "City" : ["Jakarta"]
+}
+
+df = pd.DataFrame(person)
+
+df["Salary"] = [50000000]
+print(df)
+
+print("\nUbah value Age menjadi 21:")
+df["Age"] = [21]
+print(df)
+
+exit()
+
 #----------------------------------------------menghitung berapa kali setiap kata muncul di dalam sebuah teks------------------------------------------------
 # Input teks
 teks = "saya suka makan nasi dan saya suka belajar python"
