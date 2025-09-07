@@ -1,3 +1,12 @@
+#------------------------Cetak semua nama yang panjangnya > 4 huruf------------------------
+names = ["Ayu", "Budi", "Citra", "Dodi", "Eka", "Fajar"]
+
+print("Cetak hanya nama yang panjangnya > 4 huruf:")
+for name in names:
+    if len(name) > 4:
+        print(name)
+exit()
+
 #------------------------Cetak semua gaji yang > 6jt------------------------
 salaries = [7000000, 5500000, 8200000, 4800000]
 
