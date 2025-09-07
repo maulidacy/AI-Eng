@@ -20,7 +20,12 @@ df[df["Gender"] == "Female"] # ambil baris dengan gender female
 df[df["City"] == "Jakarta"] # ambil baris dengan kota Jakarta
 #----------------------------------------------Filtering Kombinasi-------------------------------------------------
 # AND pakai &
-df[(df["City"]=="Jakarta") & (df["Occuption"]=="Engineer")]
+df[(df["City"]=="Jakarta") & (df["Occupation"]=="Engineer")]
 
 # OR pakai |
 df[(df["Age"] < 25) | (df["Salary"] < 10000000)]
+
+# NOT pakai ~
+df[~(df["Age"] < 25)]
+
+#----------------------------------------------Latihan-------------------------------------------------
