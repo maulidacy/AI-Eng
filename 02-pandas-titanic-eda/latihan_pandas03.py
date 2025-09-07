@@ -38,3 +38,6 @@ print(df[df["Gender"] == "Female"])
 
 print("\nAmbil semua orang dengan gaji > 8jt:")
 print(df[df["Salary"] > 8000000])
+
+print("\nAmbil semua orang dengan kota Jakarta dan pekerjaan Engineer:")
+print(df[(df["City"] == "Jakarta") & (df["Occupation"] == "Engineer")])
