@@ -32,3 +32,9 @@ df[~(df["Age"] < 25)]
 
 print("\nAmbil semua orang dengan usia > 25:")
 print(df[df["Age"] > 25])
+
+print("\nAmbil semua orang gender female:")
+print(df[df["Gender"] == "Female"])
+
+print("\nAmbil semua orang dengan gaji > 8jt:")
+print(df[df["Salary"] > 8000000])
