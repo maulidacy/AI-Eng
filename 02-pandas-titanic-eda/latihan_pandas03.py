@@ -44,3 +44,6 @@ print(df[(df["City"] == "Jakarta") & (df["Occupation"] == "Engineer")])
 
 print("\nAmbil semua orang dengan umur < 25 atau gaji > 10jt:")
 print(df[(df["Age"] < 25) | (df["Salary"] > 10000000)])
+
+print("\nAmbil semua orang dengan kota Jakarta, pekerjaan Engineer dan umur > 25:")
+print(df[(df["Occupation"] == "Engineer") & (df["City"] == "Jakarta") & (df["Age"] > 25)])
