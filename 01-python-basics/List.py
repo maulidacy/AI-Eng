@@ -1,3 +1,14 @@
+#------------------------Cetak semua gaji yang > 6jt------------------------
+salaries = [7000000, 5500000, 8200000, 4800000]
+
+print("Cek Gaji > 6 Juta:")
+for salary in salaries:
+    if salary > 6000000:
+        print(f"Salary: Rp {salary:,} -> memenuhi syarat")
+    else:
+        print(f"Salary: Rp {salary:,} -> tidak memenuhi syarat")
+exit()
+
 #------------------------Hitung Rata-rata, Max, Min tanpa Fungsi Bawaan------------------------
 ages = [23, 31, 27, 22, 36]
 total = 0
