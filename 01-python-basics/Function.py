@@ -5,6 +5,16 @@
 # sapa("Budi")  # Budi = argumen (nilai yang dikirim saat fungsi dipanggil)
 # print(dir(str)) //cek semua fungsi bawaan dari tipe data string
 
+#---------------------------- Fungsi yang Menerima Argumen ----------------------------
+def is_adult(age):
+    return age >= 18
+
+ages = [17, 14, 27, 22, 36]
+
+for age in ages:
+    print(f"Umur: {age} - Dewasa: {is_adult(age)}")
+exit()
+
 #---------------------------- Analisis Sentimen Sederhana ----------------------------
 # Kamus sentimen sederhana
 sentiment_lexicon = {
