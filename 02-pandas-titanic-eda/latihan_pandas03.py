@@ -11,3 +11,16 @@ data = {
 
 df = pd.DataFrame(data)
 print(df)
+
+#----------------------------------------------Filter Numerik-------------------------------------------------  
+df[df["Age"] > 25] # ambil baris dengan umur > 25 
+df[df["Salary"] >= 8000000] # ambil baris dengan gaji >= 8jt
+#----------------------------------------------Filter Categorical-------------------------------------------------
+df[df["Gender"] == "Female"] # ambil baris dengan gender female
+df[df["City"] == "Jakarta"] # ambil baris dengan kota Jakarta
+#----------------------------------------------Filtering Kombinasi-------------------------------------------------
+# AND pakai &
+df[(df["City"]=="Jakarta") & (df["Occuption"]=="Engineer")]
+
+# OR pakai |
+df[(df["Age"] < 25) | (df["Salary"] < 10000000)]
