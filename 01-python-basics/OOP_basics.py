@@ -3,10 +3,20 @@
 # Method = fungsi/aksi yang ada di dalam class
 # Attribute = variabel, data tiap object
 
-# Class Employee (definisi umu -> template)
+# Class Employee (definisi umum -> template)
+
 #------------------------------------------class dengan Atribut & Method Dasar----------------------------------
+# Hanya definisi perlu buat object dari class untuk digunakan
 class Employee:
-    
+    def __init__(self, name, age, salary): # constructor
+        self.name = name
+        self.age = age
+        self.salary = salary
+
+    def info(self): # method
+        print(f"Nama: {self.name}, Umur: {self.age}, Gaji: {self.salary}")
+
+exit()
 
 
 #------------------------------------------CONSTRUCTOR------------------------------------------
