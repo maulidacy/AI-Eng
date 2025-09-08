@@ -16,6 +16,23 @@ class Employee:
     def info(self): # method
         print(f"Nama: {self.name}, Umur: {self.age}, Gaji: {self.salary}")
 
+    def bonus(self, percent=10):
+        total = self.salary + (self.salary * percent / 100)
+        print(f"Gaji {self.name} setelah bonus {percent}% = {total}")
+
+# Gunakan Class
+# Buat object
+emp1 = Employee("Ayu", 23, 7000000) # constructor dipanggil otomatis
+emp2 = Employee("Budi", 31, 5500000)
+
+# Panggil method
+emp1.info()
+emp2.info()
+
+# Hitung bonus
+emp1.bonus() #default 10%
+emp2.bonus(15) #bonus 20%
+
 exit()
 
 
