@@ -22,10 +22,13 @@ print("\nFilter Kombinasi lanjutan:")
 df_eng_jkt = df[(df["Occupation"] == "Engineer") & (df["City"] == "Jakarta") & (df["Salary"] > 8000000)]
 print(df_eng_jkt)
 #------------------------------------------Filter OR (pilih salah satu kondisi)----------------------------------------
+print("\nFilter OR (pilih salah satu kondisi):")
 # Tinggal di Bandung ATAU usia > 25
 df_subset = df[(df["City"] == "Bandung") | (df["Age"] > 25)]
 print(df_subset)
 
 #------------------------------------------Latihan----------------------------------------
-
+print("\nBuat subnet df_jakarta yang hanya berisi orang Jakarta:")
+df_jakarta = df[(df["City"] == "Jakarta")]
+print(df_jakarta)
 
