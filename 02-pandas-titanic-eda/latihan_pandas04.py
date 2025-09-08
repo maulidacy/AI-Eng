@@ -21,3 +21,11 @@ print("\nFilter Kombinasi lanjutan:")
 # Engineer di Jakarta dengan gaji > 8jt
 df_eng_jkt = df[(df["Occupation"] == "Engineer") & (df["City"] == "Jakarta") & (df["Salary"] > 8000000)]
 print(df_eng_jkt)
+#------------------------------------------Filter OR (pilih salah satu kondisi)----------------------------------------
+# Tinggal di Bandung ATAU usia > 25
+df_subset = df[(df["City"] == "Bandung") | (df["Age"] > 25)]
+print(df_subset)
+
+#------------------------------------------Latihan----------------------------------------
+
+
