@@ -10,3 +10,14 @@ data = {
 }
 
 df = pd.DataFrame(data)
+print(df)
+
+#-------------------------------------------Simpan Hasil Filter----------------------------------------------
+print("\nSimpan Hasil Filter:")
+df_jakarta = df[df["City"] == "Jakarta"]
+print(df_jakarta)
+#-------------------------------------------Filter Kombinasi lanjutan-------------------------------------------
+print("\nFilter Kombinasi lanjutan:")
+# Engineer di Jakarta dengan gaji > 8jt
+df_eng_jkt = df[(df["Occupation"] == "Engineer") & (df["City"] == "Jakarta") & (df["Salary"] > 8000000)]
+print(df_eng_jkt)
