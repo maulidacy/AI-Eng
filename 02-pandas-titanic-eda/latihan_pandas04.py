@@ -43,3 +43,7 @@ print(df_high_salary)
 print("\nBuat subnet df_eng_jkt yang hanya berisi Engineer di Jakarta:")
 df_eng_jkt = df[(df["Occupation"] == "Engineer") & (df["City"] == "Jakarta")]
 print(df_eng_jkt)
+
+print("\nBuat subnet df_special yang hanya berisi orang dengan gaji > 9jt ATAU usia < 23:")
+df_special = df[(df["Salary"] > 9000000) | (df["Age"] < 23)]
+print(df_special)
