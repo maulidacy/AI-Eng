@@ -32,3 +32,6 @@ print("\nBuat subnet df_jakarta yang hanya berisi orang Jakarta:")
 df_jakarta = df[(df["City"] == "Jakarta")]
 print(df_jakarta)
 
+print("\nBuat subnet df_female yang hanya berisi orang Female:")
+df_female = df[(df["Gender"] == "Female")]
+print(df_female)
