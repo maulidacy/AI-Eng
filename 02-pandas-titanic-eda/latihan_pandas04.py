@@ -39,3 +39,7 @@ print(df_female)
 print("\nBuat subnet df_high_salary yang hanya berisi orang dengan gaji > 8jt:")
 df_high_salary = df[(df["Salary"] > 8000000)]
 print(df_high_salary)
+
+print("\nBuat subnet df_eng_jkt yang hanya berisi Engineer di Jakarta:")
+df_eng_jkt = df[(df["Occupation"] == "Engineer") & (df["City"] == "Jakarta")]
+print(df_eng_jkt)
