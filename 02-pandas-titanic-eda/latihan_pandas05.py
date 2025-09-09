@@ -37,3 +37,10 @@ df["Age_Group"] = df["Age"].apply(
     lambda x: "Young" if x < 25 else ("Adult" if x <= 35 else "Senior")
 )
 print(df)
+
+print("\nHapus kolom Tax:")
+df.drop("Tax", axis=1, inplace=True) # hapus kolom Tax
+print(df)
+
+print("\nSimpan DataFrame ke file CSV:")
+df.to_csv("day5_result.csv", index=False)
