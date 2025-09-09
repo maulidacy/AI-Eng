@@ -31,3 +31,9 @@ print(df)
 print("\nTambahkan kolom Net_Salary = Salary - Tax: ")
 df["Net_Salary"] = df["Salary"] - df["Tax"]
 print(df)
+
+print("\nTambahkan kolom Age_Group:")
+df["Age_Group"] = df["Age"].apply(
+    lambda x: "Young" if x < 25 else ("Adult" if x <= 35 else "Senior")
+)
+print(df)
