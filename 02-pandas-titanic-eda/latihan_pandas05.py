@@ -20,3 +20,10 @@ df["Tax"] = df["Salary"] * 0.1
 df["Age_Group"] = df["Age"].apply(
     lambda x: "Young" if x < 25 else ("Adult" if x <= 35 else "Senior")
 )
+#-------------------------------------------Hapus Kolom----------------------------------------------
+df.drop("Tax", axis=1, inplace=True) # hapus kolom Tax
+
+#-------------------------------------------LATIHAN----------------------------------------------
+print("\nTambahkan kolom Tax = 10% dari kolom Salary:")
+df["Tax"] = df["Salary"] * 0.1
+print(df)
