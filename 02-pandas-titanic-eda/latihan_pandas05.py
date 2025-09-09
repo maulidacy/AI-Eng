@@ -27,3 +27,7 @@ df.drop("Tax", axis=1, inplace=True) # hapus kolom Tax
 print("\nTambahkan kolom Tax = 10% dari kolom Salary:")
 df["Tax"] = df["Salary"] * 0.1
 print(df)
+
+print("\nTambahkan kolom Net_Salary = Salary - Tax: ")
+df["Net_Salary"] = df["Salary"] - df["Tax"]
+print(df)
