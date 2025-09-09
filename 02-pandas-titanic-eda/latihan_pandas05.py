@@ -39,19 +39,8 @@ df["Age_Group"] = df["Age"].apply(
 )
 print(df)
 
-# Tanpa inplace
-df2 = df.drop("Tax", axis=1)   # hasil disimpan ke df2
-print(df.columns)              # Tax masih ada
-
-# Dengan inplace
-df.drop("Tax", axis=1, inplace=True)  # langsung ubah df
-print(df.columns)              # Tax sudah hilang
-print("\nHapus kolom Tax:")
-df.drop("Tax", axis=1, inplace=True) # hapus kolom Tax
-print(df)
-
 print("\nSimpan DataFrame ke file CSV:")
-df.to_csv("day5_result.csv", index=False)
+# df.to_csv("day5_result.csv", index=False)
 
 
 #=========================================== LATIHAN 2 ==============================================
