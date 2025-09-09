@@ -23,7 +23,8 @@ df["Age_Group"] = df["Age"].apply(
 #-------------------------------------------Hapus Kolom----------------------------------------------
 df.drop("Tax", axis=1, inplace=True) # hapus kolom Tax
 
-#-------------------------------------------LATIHAN----------------------------------------------
+#=========================================== LATIHAN 1 ==============================================
+
 print("\nTambahkan kolom Tax = 10% dari kolom Salary:")
 df["Tax"] = df["Salary"] * 0.1
 print(df)
@@ -51,3 +52,6 @@ print(df)
 
 print("\nSimpan DataFrame ke file CSV:")
 df.to_csv("day5_result.csv", index=False)
+
+
+#=========================================== LATIHAN 2 ==============================================
