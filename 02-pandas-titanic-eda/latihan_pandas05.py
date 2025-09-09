@@ -53,3 +53,16 @@ data_2 = {
 df_2 = pd.DataFrame(data_2)
 print(df_2)
 
+#----------------------------------------- Transformasi Sederhana -----------------------------------------
+# Tambah kolom Pajak (10% dari Salary) -> langsung rumus
+df_2["Tax"] = df_2["Salary"] * 0.1
+
+# Transformasi dengan Logika Bercabang
+# tambah kolom Age_Group
+df_2["Age_Group"] = df_2["Age"].apply(
+    lambda x: "Young" if x < 25 else ("Adult" if x <= 35 else "Senior")
+)
+
+# Pakai Fungsi Biasa (alternatif lambda)
+
+
