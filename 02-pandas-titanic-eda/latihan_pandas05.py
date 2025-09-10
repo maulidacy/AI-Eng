@@ -101,7 +101,7 @@ df_2["Salary_Status2"] = df_2["Salary"].apply(
 
 print("\nInitial huruf pertama dari Name:")
 df_2["Initial"] = df_2["Name"].apply(
-    lambda x: x[0]
+    lambda x: x[0] # ambil huruf pertama
 )
 print(df_2)
 
