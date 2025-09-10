@@ -82,3 +82,19 @@ df["Name_Length"] = df["Name"].apply(lambda x: len(x))
 df["Level"] = df["Salary"].apply(lambda x: "High" if x > 8000000 else "Normal")
 
 #----------------------------------------- LATIHAN 3 -----------------------------------------
+print("\nTambahkan kolom Salary_Status:")
+def Salary_Status(x):
+    if x < 6000000:
+        return "Low"
+    elif x <= 9000000:
+        return "Medium"
+    else:
+        return "High"
+    
+df_2["Salary_Status"] = df_2["Salary"].apply(Salary_Status)
+print(df_2)
+
+# Versi Lambda
+df_2["Salary_Status2"] = df_2["Salary"].apply(
+    lambda x: "Low" if x < 6000000 else ("Medium" if x <= 9000000 else "High")
+)
