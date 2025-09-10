@@ -105,3 +105,11 @@ df_2["Initial"] = df_2["Name"].apply(
 )
 print(df_2)
 
+print("\nTambah kolom Double_Age:")
+df_2["Double_Age"] = df_2["Age"].apply(lambda x: x * 2)
+print(df_2)
+
+# Tanpa apply
+print("\nTambah kolom Double_Age:")
+df_2["Double_Age"] = df_2["Age"] * 2
+print(df_2)
