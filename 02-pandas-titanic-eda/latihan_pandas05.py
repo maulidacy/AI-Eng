@@ -79,4 +79,6 @@ df_2["Age_Group2"] = df["Age"].apply(categorize_age)
 df["Name_Length"] = df["Name"].apply(lambda x: len(x))
 #----------------------------------------- Kondisi dengan Salary -----------------------------------------
 # Tambah kolom Level: High kalau Salary > 8 juta, else Normal
-df[]
+df["Level"] = df["Salary"].apply(lambda x: "High" if x > 8000000 else "Normal")
+
+#----------------------------------------- LATIHAN 3 -----------------------------------------
