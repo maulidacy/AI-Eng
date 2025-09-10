@@ -64,5 +64,19 @@ df_2["Age_Group"] = df_2["Age"].apply(
 )
 
 # Pakai Fungsi Biasa (alternatif lambda)
+def categorize_age(x):
+    if x < 25:
+        return "Young"
+    elif x <= 35:
+        return "Adult"
+    else:
+        return "Senior"
+    
+df_2["Age_Group2"] = df["Age"].apply(categorize_age)
 
-
+#----------------------------------------- Operasi String dengan apply -----------------------------------------
+# Tambah kolom Nama_Lenght
+df["Name_Length"] = df["Name"].apply(lambda x: len(x))
+#----------------------------------------- Kondisi dengan Salary -----------------------------------------
+# Tambah kolom Level: High kalau Salary > 8 juta, else Normal
+df[]
