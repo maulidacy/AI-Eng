@@ -1,19 +1,15 @@
-def tampilkan_menu():
-    print("\n=== Manajemen Karyawan Sederhana ===")
+karyawan_list = []
+
+while True:
+    print("\n==== Manajemen Karyawan Sederhana ====")
     print("1. Tambah Karyawan")
     print("2. Cetak Daftar Karyawan")
     print("3. Cari Karyawan dengan Gaji Tertinggi")
     print("4. Cari Karyawan dengan Gaji Terendah")
     print("5. Hitun Rata-rata Gaji")
     print("6. Keluar")
-    print("====================================")
-
-def tambah_karyawan(name, age, salary):
-    karyawan.append((name, age, salary))
-    return karyawan
-
-while True:
-    tampilkan_menu()
+    print("=======================================")
+    
     try:
         pilihan = int(input("Pilih menu: "))
     except ValueError:
@@ -24,22 +20,15 @@ while True:
         name = input("Masukkan nama karyawan: ")
         age = int(input("Masukkan umur karyawan: "))
         salary = float(input("Masukkan gaji karyawan: "))
-        karyawan = tambah_karyawan(name, age, salary)
+        karyawan_list.append((name, age, salary))
         print("Karyawan berhasil ditambahkan!")
     elif pilihan == 2:
-        karyawan = []
-        if not karyawan:
-            print("Belum ada karyawan yang ditambahkan.")
-        else:
-            print("\nDaftar Karyawan:")
-            print("-" * 30)
-            for name, age, salary in karyawan:
-                print(f"Nama: {name}, Umur: {age}, Gaji: {salary}")
-            print("-" * 30)
+        for karyawan in daftar_karyawan:
+            print(f"Nama: {karyawan[0]}, Umur: {karyawan[1]}, Gaji: {karyawan[2]}")
+        pass
     elif pilihan == 3:
-        pass
-    elif pilihan == 4:
-        pass
+        if karyawan_list:
+         pass
     elif pilihan == 5:
         pass
     elif pilihan == 6:
