@@ -26,26 +26,28 @@ while True:
         print("\nDaftar Karyawan:")
         for karyawan in karyawan_list:
             print(f"Nama: {karyawan[0]}, Umur: {karyawan[1]}, Gaji: {karyawan[2]}")
-        pass
+
     elif pilihan == 3:
         print("\nKaryawan dengan gaji tertinggi:")
         if karyawan_list:
          tertinggi = max(karyawan_list, key=lambda karyawan: karyawan[2])
          print(f"{tertinggi[0]} dengan gaji {tertinggi[2]}")
-         pass
+        
     elif pilihan == 4:
         print("\nKaryawan dengan gaji terendah:")
         terendah = min(karyawan_list, key=lambda karyawan: karyawan[2])
         print(f"{terendah[0]} dengan gaji {terendah[2]}")
-        pass
+        
     elif pilihan == 5:
         total_gaji = sum(karyawan[2] for karyawan in karyawan_list)
         jumlah_karyawan = len(karyawan_list)
         rata_rata_gaji = total_gaji / jumlah_karyawan
         print(f"\nRata-rata gaji: {rata_rata_gaji}")
+
     elif pilihan == 6:
         print("Terima kasih telah menggunakan program ini!")
         break
+    
     else:
         print("Pilihan tidak valid. Silakan pilih menu yang tersedia.")
 
