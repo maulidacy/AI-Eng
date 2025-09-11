@@ -47,8 +47,18 @@ while True:
         print(f"\nRata-rata gaji: {rata_rata_gaji}")
 
     elif pilihan == 6:
-
+        print("\nTotal gaji perusahaan:")
+        total_gaji = sum(karyawan[2] for karyawan in karyawan_list)
+        print(f"Total gaji: {total_gaji}")
+        
     elif pilihan == 7:
+        print("\nHapus Karyawan:")
+        name = input("Masukkan nama karyawan yang ingin dihapus: ")
+        for karyawan in karyawan_list:
+            if karyawan[0] == name:
+                karyawan_list.remove(karyawan)
+                print("Karyawan berhasil dihapus!")
+                break
 
     elif pilihan == 8:
         print("Terima kasih telah menggunakan program ini!")
