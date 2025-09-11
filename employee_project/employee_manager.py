@@ -23,11 +23,15 @@ while True:
         karyawan_list.append((name, age, salary))
         print("Karyawan berhasil ditambahkan!")
     elif pilihan == 2:
-        for karyawan in daftar_karyawan:
+        print("\nDaftar Karyawan:")
+        for karyawan in karyawan_list:
             print(f"Nama: {karyawan[0]}, Umur: {karyawan[1]}, Gaji: {karyawan[2]}")
         pass
     elif pilihan == 3:
+        print("\nKaryawan dengan gaji tertinggi:")
         if karyawan_list:
+         tertinggi = max(karyawan_list, key=lambda karyawan: karyawan[2])
+         print(f"Karyawan dengan gaji tertinggi adalah {tertinggi[0]} dengan gaji {tertinggi[2]}")
          pass
     elif pilihan == 5:
         pass
