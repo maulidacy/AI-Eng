@@ -18,5 +18,17 @@ while True:
     except ValueError:
         print("Masukkan angka antara 1 sampai 6!")
         continue
-    
+
+    if pilihan == 1:
+        name = input("Masukkan nama karyawan: ")
+        age = int(input("Masukkan umur karyawan: "))
+        salary = float(input("Masukkan gaji karyawan: "))
+        karyawan = tambah_karyawan(name, age, salary)
+        print("Karyawan berhasil ditambahkan!")
+    elif pilihan == 2:
+        if not karyawan:
+            print("Belum ada karyawan yang ditambahkan.")
+        else:
+            for karyawan in karyawan:
+                print(f"Nama: {karyawan['name']}, Umur: {karyawan['age']}, Gaji: {karyawan['salary']}")
 
