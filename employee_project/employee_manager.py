@@ -6,8 +6,10 @@ while True:
     print("2. Cetak Daftar Karyawan")
     print("3. Cari Karyawan dengan Gaji Tertinggi")
     print("4. Cari Karyawan dengan Gaji Terendah")
-    print("5. Hitun Rata-rata Gaji")
-    print("6. Keluar")
+    print("5. Rata-rata Gaji")
+    print("6. Total Gaji Perusahaan")
+    print("7. Hapus Karyawan")
+    print("8. Keluar")
     print("=======================================")
     
     try:
@@ -45,9 +47,13 @@ while True:
         print(f"\nRata-rata gaji: {rata_rata_gaji}")
 
     elif pilihan == 6:
+
+    elif pilihan == 7:
+
+    elif pilihan == 8:
         print("Terima kasih telah menggunakan program ini!")
         break
-    
+
     else:
         print("Pilihan tidak valid. Silakan pilih menu yang tersedia.")
 
