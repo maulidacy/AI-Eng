@@ -24,6 +24,7 @@ while True:
         salary = float(input("Masukkan gaji karyawan: "))
         karyawan_list.append((name, age, salary))
         print("Karyawan berhasil ditambahkan!")
+        
     elif pilihan == 2:
         print("\nDaftar Karyawan:")
         for karyawan in karyawan_list:
@@ -50,7 +51,7 @@ while True:
         print("\nTotal gaji perusahaan:")
         total_gaji = sum(karyawan[2] for karyawan in karyawan_list)
         print(f"Total gaji: {total_gaji}")
-        
+
     elif pilihan == 7:
         print("\nHapus Karyawan:")
         name = input("Masukkan nama karyawan yang ingin dihapus: ")
