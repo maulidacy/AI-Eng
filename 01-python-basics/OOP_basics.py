@@ -33,21 +33,41 @@ emp2.info()
 emp1.bonus() #default 10%
 emp2.bonus(15) #bonus 20%
 
-exit()
 
 
 #------------------------------------------CONSTRUCTOR------------------------------------------
-class Employee:
+class Employeee:
     def __init__(self, name, age, salary): # constructor
         self.name = name
         self.age = age
         self.salary = salary
 
 # saat emp1 dibuat, constructor langsung jalan -> atribut name, age, salary terisi
-emp1 = Employee("Ayu", 23, 7000000) # constructor dipanggil otomatis
+emp1 = Employeee("Ayu", 23, 7000000) # constructor dipanggil otomatis
 
 # tanpa constructor, harus diisi secara manual
 # emp1 = Employee()
 # emp1.name = "Ayu"
 # emp1.age = 23
 # emp1.salary = 7000000 
+
+#------------------------------------------LATIHAN------------------------------------------
+print("\nLatihan OOP")
+class EmployeeSederhana:
+    def karyawan(self, name, age, salary):
+        self.name = name
+        self.age = age
+        self.salary = salary
+
+# Buat Object
+emp1 = EmployeeSederhana()
+emp1.karyawan("Ayu", 23, 7000000)
+emp2 = EmployeeSederhana()
+emp2.karyawan("Budi", 31, 5500000)
+
+# Panggil Method
+emp1.karyawan("Ayu", 23, 7000000)
+emp2.karyawan("Budi", 31, 5500000)
+
+
+
