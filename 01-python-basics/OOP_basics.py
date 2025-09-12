@@ -54,21 +54,21 @@ emp1 = Employeee("Ayu", 23, 7000000) # constructor dipanggil otomatis
 #------------------------------------------LATIHAN------------------------------------------
 print("\nLatihan OOP")
 class EmployeeSederhana:
-    def karyawan(self, name, age, salary):
+    def __init__(self, name, age, salary):   # constructor
         self.name = name
         self.age = age
         self.salary = salary
 
-    def info(self):
+    def info(self):   # method
         print(f"Nama: {self.name}, Umur: {self.age}, Gaji: {self.salary}")
 
-    def department(self, department):
+    def department(self, department):   # method lain
         print(f"Department: {department}")
+
 
 # Buat Object
 emp1 = EmployeeSederhana("Ayu", 23, 7000000)
 emp2 = EmployeeSederhana("Budi", 31, 5500000)
-
 
 # Panggil Method
 emp1.info()
@@ -76,7 +76,3 @@ emp2.info()
 
 emp1.department("IT")
 emp2.department("HR")
-
-
-
-
