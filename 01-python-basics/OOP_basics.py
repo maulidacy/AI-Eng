@@ -53,6 +53,8 @@ emp1 = Employeee("Ayu", 23, 7000000) # constructor dipanggil otomatis
 
 #------------------------------------------LATIHAN------------------------------------------
 print("\nLatihan OOP")
+
+karyawan_list = [emp1, emp2]
 class EmployeeSederhana:
     def __init__(self, name, age, salary, department):   # constructor
         self.name = name
@@ -63,6 +65,11 @@ class EmployeeSederhana:
     def info(self):   # method
         print(f"Nama: {self.name}, Umur: {self.age}, Gaji: {self.salary}, Department: {self.department}")
 
+    # method total gaji semua karyawan
+    def total_gaji(self):
+        gaji_semua_karyawan = sum(karyawan.salary for karyawan in karyawan_list)
+        print(f"Total gaji perusahaan: {gaji_semua_karyawan}")
+
 # Buat Object
 emp1 = EmployeeSederhana("Ayu", 23, 7000000, "IT")
 emp2 = EmployeeSederhana("Budi", 31, 5500000, "HR")
@@ -70,6 +77,11 @@ emp2 = EmployeeSederhana("Budi", 31, 5500000, "HR")
 # Panggil Method
 emp1.info()
 emp2.info()
+
+emp1.total_gaji()
+
+
+print("\n")
 
 
 
