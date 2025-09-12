@@ -68,7 +68,7 @@ class EmployeeSederhana:
     # method total gaji semua karyawan
     def total_gaji(self):
         gaji_semua_karyawan = sum(karyawan.salary for karyawan in karyawan_list)
-        print(f"Total gaji perusahaan: {gaji_semua_karyawan}")
+        print(f"Total gaji yang dibayarkan perusahaan: {gaji_semua_karyawan}")
 
 # Buat Object
 emp1 = EmployeeSederhana("Ayu", 23, 7000000, "IT")
@@ -79,7 +79,6 @@ emp1.info()
 emp2.info()
 
 emp1.total_gaji()
-
 
 print("\n")
 
