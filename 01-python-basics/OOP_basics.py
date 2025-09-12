@@ -59,15 +59,24 @@ class EmployeeSederhana:
         self.age = age
         self.salary = salary
 
+    def info(self):
+        print(f"Nama: {self.name}, Umur: {self.age}, Gaji: {self.salary}")
+
+    def department(self, department):
+        print(f"Department: {department}")
+
 # Buat Object
-emp1 = EmployeeSederhana()
-emp1.karyawan("Ayu", 23, 7000000)
-emp2 = EmployeeSederhana()
-emp2.karyawan("Budi", 31, 5500000)
+emp1 = EmployeeSederhana("Ayu", 23, 7000000)
+emp2 = EmployeeSederhana("Budi", 31, 5500000)
+
 
 # Panggil Method
-emp1.karyawan("Ayu", 23, 7000000)
-emp2.karyawan("Budi", 31, 5500000)
+emp1.info()
+emp2.info()
+
+emp1.department("IT")
+emp2.department("HR")
+
 
 
 
