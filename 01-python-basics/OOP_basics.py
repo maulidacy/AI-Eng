@@ -54,7 +54,6 @@ emp1 = Employeee("Ayu", 23, 7000000) # constructor dipanggil otomatis
 #------------------------------------------LATIHAN------------------------------------------
 print("\nLatihan OOP")
 
-karyawan_list = [emp1, emp2]
 class EmployeeSederhana:
     def __init__(self, name, age, salary, department):   # constructor
         self.name = name
@@ -65,22 +64,31 @@ class EmployeeSederhana:
     def info(self):   # method
         print(f"Nama: {self.name}, Umur: {self.age}, Gaji: {self.salary}, Department: {self.department}")
 
-    # method total gaji semua karyawan
-    def total_gaji(self):
-        gaji_semua_karyawan = sum(karyawan.salary for karyawan in karyawan_list)
-        print(f"Total gaji yang dibayarkan perusahaan: {gaji_semua_karyawan}")
+    @staticmethod
+    def total_gaji(karyawan_list):
+        gaji_semua = sum(karyawan.salary for karyawan in karyawan_list)
+        print(f"Total gaji yang dibayarkan perusahaan: {gaji_semua}")
+
+    @staticmethod
+    def gaji_tertinggi(karyawan_list):
+        gaji_tertinggi = max(karyawan.salary for karyawan in karyawan_list)
+        print(f"Gaji tertinggi: {gaji_tertinggi}")
+
 
 # Buat Object
 emp1 = EmployeeSederhana("Ayu", 23, 7000000, "IT")
-emp2 = EmployeeSederhana("Budi", 31, 5500000, "HR")
+emp2 = EmployeeSederhana("Budi", 31, 9000000, "HR")
+
+# Masukkan ke list setelah object dibuat
+karyawan_list = [emp1, emp2]
 
 # Panggil Method
 emp1.info()
 emp2.info()
 
-emp1.total_gaji()
-
-print("\n")
+# Panggil method statis dengan passing list
+EmployeeSederhana.gaji_tertinggi(karyawan_list)
+EmployeeSederhana.total_gaji(karyawan_list)
 
 
 
