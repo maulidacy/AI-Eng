@@ -22,7 +22,7 @@ emp1 = Employee("Ayu", 23, 7000000)
 emp2 = Employee("Budi", 31, 5500000)
 
 # Masukkan ke list setelah object dibuat
-# emp_list = [emp1, emp2]
+emp_list = [emp1, emp2] # Kalau banyak karyawan atau object gunakan list
 
 # Panggil Method
 emp1.info()
