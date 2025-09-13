@@ -91,5 +91,27 @@ emp2.info()
 EmployeeSederhana.gaji_tertinggi(karyawan_list)
 EmployeeSederhana.total_gaji(karyawan_list)
 
+#------------------------------------------LATIHAN 2------------------------------------------
+print("\nLatihan 2 OOP")
+class Student:
+    def __init__(self, name, grade, major):
+        self.name = name
+        self.grade = grade
+        self.major = major
+
+    def info(self):
+        print(f"Nama: {self.name}, Grade: {self.grade}, Major: {self.major}")
+
+# Buat Object
+student1 = Student("Andi", "A", "Computer Science")
+student2 = Student("Siti", "B", "Mathematics")
+
+# Masukkan ke list setelah object dibuat
+student_list = [student1, student2]
+
+# Panggil Method
+student1.info()
+student2.info()
+
 
 
