@@ -18,11 +18,11 @@ class Employee:
         print(f"Gaji {self.name} setelah bonus {percent}% = {total}")
 
     # Static Method untuk net salary semua karyawan
-    @staticmethod
-    def net_salary(self, tax=5):
-        for self in emp_list:
-            net = self.salary - (self.salary * tax / 100)
-            print(f"Gaji bersih {self.name} setelah pajak {tax}% = {net}")
+    @staticmethod # @staticmethod artinya method ini tidak butuh self (tidak terikat pada 1 object)
+    def net_salary(emp_list, tax=5):
+        for emp in emp_list: # gunakan for untuk menghitung semua karyawan dalam emp_list, bukan hanya 1 orang
+            net = emp.salary - (emp.salary * tax / 100)
+            print(f"Gaji bersih {emp.name} setelah pajak {tax}% = {net}")
 
 # Buat Object
 emp1 = Employee("Ayu", 23, 7000000)
