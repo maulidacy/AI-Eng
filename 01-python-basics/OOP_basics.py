@@ -20,6 +20,7 @@ class Employee:
         total = self.salary + (self.salary * percent / 100)
         print(f"Gaji {self.name} setelah bonus {percent}% = {total}")
 
+
 # Gunakan Class
 # Buat object
 emp1 = Employee("Ayu", 23, 7000000) # constructor dipanggil otomatis
@@ -52,7 +53,7 @@ emp1 = Employeee("Ayu", 23, 7000000) # constructor dipanggil otomatis
 # emp1.salary = 7000000 
 
 #------------------------------------------LATIHAN------------------------------------------
-print("\nLatihan OOP")
+print("\nLatihan 1 OOP")
 
 class EmployeeSederhana:
     def __init__(self, name, age, salary, department):   # constructor
