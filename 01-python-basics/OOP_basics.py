@@ -92,6 +92,7 @@ EmployeeSederhana.gaji_tertinggi(karyawan_list)
 EmployeeSederhana.total_gaji(karyawan_list)
 
 #------------------------------------------LATIHAN 2------------------------------------------
+
 print("\nLatihan 2 OOP")
 class Student:
     def __init__(self, name, grade, major):
