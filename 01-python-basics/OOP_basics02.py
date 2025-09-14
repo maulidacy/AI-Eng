@@ -10,7 +10,11 @@ class Employee:
     
     # Method untuk menampilkan info karyawan
     def info(self):
-        print(f"Nama: {self.name}, Umur: {self.age}, Gaji: {self.salary}")
+        print("\n==== Informasi Karyawan ====")
+        print(f"Nama: {self.name}")
+        print(f"Umur: {self.age}")
+        print(f"Gaji: {self.salary}")
+        print("============================")
 
     # Method untuk menghitung bonus
     def bonus(self, percent=10):
