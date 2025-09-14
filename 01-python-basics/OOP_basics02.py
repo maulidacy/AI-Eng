@@ -24,6 +24,12 @@ class Employee:
             net = emp.salary - (emp.salary * tax / 100)
             print(f"Gaji bersih {emp.name} setelah pajak {tax}% = {net}")
 
+    @staticmethod
+    def change_name(emp_list, new_name):
+        for emp in emp_list:
+            emp.name = new_name
+            print(f"Nama diubah menjadi: {emp.name}")
+
 # Buat Object
 emp1 = Employee("Ayu", 23, 7000000)
 emp2 = Employee("Budi", 31, 5500000)
@@ -38,5 +44,10 @@ emp2.info()
 emp1.bonus(15)   # contoh menghitung bonus 15%
 emp2.bonus()     # default bonus 10%
 
+emp1.change_name("Ayu Lestari")  # Panggil method untuk ganti nama
+emp2.change_name("Budi Santoso")    
+
 # Panggil method statis dengan passing list
 Employee.net_salary(emp_list, tax=5)
+
+Employee.change_name(emp_list, "Karyawan")  # Ganti semua nama karyawan jadi "Karyawan
