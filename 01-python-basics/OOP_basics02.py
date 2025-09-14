@@ -30,6 +30,14 @@ class Employee:
         self.name = new_name
         print(f"Nama {old_name} telah diubah menjadi: {self.name}")
 
+    def compare_salary(self, other):
+        if self.salary > other.salary:
+            print(f"{self.name} memiliki gaji lebih besar daripada {other.name}")
+        elif self.salary < other.salary:
+            print(f"{self.name} memiliki gaji lebih kecil daripada {other.name}")
+        else:
+            print(f"{self.name} dan {other.name} memiliki gaji yang sama")
+
 # Buat Object
 emp1 = Employee("Ayu", 23, 7000000)
 emp2 = Employee("Budi", 31, 5500000)
