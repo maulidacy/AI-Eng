@@ -24,7 +24,6 @@ class Employee:
             net = emp.salary - (emp.salary * tax / 100)
             print(f"Gaji bersih {emp.name} setelah pajak {tax}% = {net}")
 
-
 # Buat Object
 emp1 = Employee("Ayu", 23, 7000000)
 emp2 = Employee("Budi", 31, 5500000)
