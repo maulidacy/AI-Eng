@@ -31,7 +31,7 @@ class Employee:
    # Method untuk mengganti nama semua karyawan dalam list
     def change_name(self, new_name):
         old_name = self.name # simpan nama lama
-        self.name = new_name
+        self.name = new_name # ubah atribut name
         print(f"Nama {old_name} telah diubah menjadi: {self.name}")
 
     def compare_salary(self, other):
