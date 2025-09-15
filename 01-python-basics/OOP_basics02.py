@@ -34,6 +34,7 @@ class Employee:
         self.name = new_name # ubah atribut name
         print(f"Nama {old_name} telah diubah menjadi: {self.name}")
 
+    # Membandingkan gaji antar karyawan
     def compare_salary(self, other):
         if self.salary > other.salary:
             print(f"\n{self.name} memiliki gaji lebih besar daripada {other.name}")
