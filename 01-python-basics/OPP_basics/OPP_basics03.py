@@ -17,3 +17,10 @@ class Employee:
 
     def is_senior(self):
         return self.age >= 30
+
+# Object
+emp1 = Employee("Maul", 20, 70000000)
+emp2 = Employee("Budi", 35, 5500000)
+
+emp1.info()
+emp2.info()
