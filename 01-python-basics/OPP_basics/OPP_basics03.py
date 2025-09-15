@@ -14,3 +14,6 @@ class Employee:
     def raise_salary(self, amount):
         self.salary += amount
         print(f"Gaji {self.name} naik sebesar {amount}. Gaji baru: {self.salary}")
+
+    def is_senior(self):
+        return self.age >= 30
