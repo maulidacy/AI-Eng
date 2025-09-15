@@ -34,3 +34,9 @@ emp_list = [emp1, emp2] # List karyawan
 # cek apakah senior
 print(f"\n{emp1.name} senior: {emp1.is_senior()}")
 print(f"{emp2.name} senior: {emp2.is_senior()}")    
+
+# Versi if-else
+if emp2.is_senior():
+    print(emp2.name, "adalah karyawan senior")
+else:
+    print(emp2.name, "belum karyawan senior")
