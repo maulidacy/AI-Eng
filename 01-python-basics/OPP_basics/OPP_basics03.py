@@ -22,5 +22,9 @@ class Employee:
 emp1 = Employee("Maul", 20, 70000000)
 emp2 = Employee("Budi", 35, 5500000)
 
+# Panggil Method
 emp1.info()
 emp2.info()
+
+emp1.raise_salary(500000) # Naikkan gaji emp1 sebesar 500000
+emp1.info()
