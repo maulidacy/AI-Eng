@@ -28,3 +28,9 @@ emp2.info()
 
 emp1.raise_salary(500000) # Naikkan gaji emp1 sebesar 500000
 emp1.info()
+
+emp_list = [emp1, emp2] # List karyawan
+
+# cek apakah senior
+print(f"\n{emp1.name} senior: {emp1.is_senior()}")
+print(f"{emp2.name} senior: {emp2.is_senior()}")    
