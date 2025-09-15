@@ -1,6 +1,13 @@
 # Method = fungsi di dalam class
 # Ditulis seperti fungsi biasa, tapi parameter pertamanya selalu self
 # Bisa akses atribut object lewat self.atribut
+# __init__ magic method = constructor, method khusus yang otomatis dipanggil saat object dibuat
+'''
+__init__ → dipanggil otomatis saat membuat object (constructor).
+__str__ → dipanggil saat object di-print.
+__eq__, __lt__, __gt__ → dipakai saat membandingkan object dengan operator (==, <, >).
+'''
+
 
 class Employee:
     def __init__(self, name, age, salary):
