@@ -7,7 +7,7 @@ class Employee:
     def info(self):
         print("\n==== Informasi Karyawan ====")
         print(f"Nama: {self.name}")
-        print(f"Umur: {self.age}")
+        print(f"Umur: {self._age}")
         print(f"Gaji: {self._salary}")
         print("============================")
         
@@ -51,7 +51,8 @@ emp1 = Employee("Maul", 20, 80000000)
 
 # Panggil Method
 emp1.info()
-emp1.apply_raise(percent)
+emp1.apply_raise(10) # Naikkan gaji 10%
+emp1.info()
 
 
 # Cetak gaji awal dengan get_salary()
