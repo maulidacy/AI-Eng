@@ -20,3 +20,49 @@ class Employee:
             print(f"Gaji {self.name} diperbarui menjadi {self._salary}")
         else:
             print("❌ Gaji tidak boleh negatif!")
+
+
+    def get_age(self):
+        return self._age
+
+    def set_age(self, new_age):
+        if new_age >= 18:    
+            self._age = new_age
+        else:
+            print("❌ Umur tidak boleh kurang dari 18!")
+
+    def apply_raise(self, percent):
+        self._salary += self._salary * percent / 100
+        print(f"Gaji {self.name} naik sebesar {percent}%. Gaji baru:")
+
+    employee_list = []
+    
+    def add_employee(self, employee_list):
+        for employee in self.employee_list:
+            if employee.name == self.name:
+                print("❌ Karyawan sudah ada!")
+                return
+            else:
+                self.employee_list.append(employee)
+                print("✅ Karyawan berhasil ditambahkan!")
+
+# Object object
+emp1 = main("Maul", 20, 80000000)
+
+# Panggil Method
+emp1.info()
+emp1.apply_raise(percent)
+
+
+# Cetak gaji awal dengan get_salary()
+print(f"Gaji awal: {emp1.get_salary()}")
+
+# Ubah gaji dengan set_salary() → coba input angka positif & negatif.
+emp1.set_salary(90000000) # Gaji baru
+emp1.set_salary(-1000000)
+
+# Periksa apakah atribut _salary benar-benar berubah.
+emp1.info()
+
+# Ubah age jadi protected (_age), lalu buat get_age() dan set_age().
+# Validasi: umur tidak boleh < 18.
