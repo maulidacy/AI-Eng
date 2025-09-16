@@ -47,7 +47,7 @@ class Employee:
                 print("✅ Karyawan berhasil ditambahkan!")
 
 # Object object
-emp1 = main("Maul", 20, 80000000)
+emp1 = Employee("Maul", 20, 80000000)
 
 # Panggil Method
 emp1.info()
