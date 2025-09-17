@@ -2,7 +2,7 @@ class Employee:
     def __init__(self, name, age, salary):
         self.name = name
         self._age = age
-        self._salary = salary   # protected (pakai underscore)
+        self._salary = salary   # protected (pakai underscore) privat
 
     def info(self):
         print("\n==== Informasi Karyawan ====")
@@ -11,10 +11,10 @@ class Employee:
         print(f"Gaji: {self._salary}")
         print("============================")
         
-    def get_salary(self):
+    def get_salary(self): # getter
         return self._salary
 
-    def set_salary(self, new_salary):
+    def set_salary(self, new_salary): # setter
         if new_salary >= 0:
             self._salary = new_salary
             print(f"Gaji {self.name} diperbarui menjadi {self._salary}")
