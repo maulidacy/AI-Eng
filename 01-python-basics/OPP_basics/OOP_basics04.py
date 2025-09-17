@@ -45,6 +45,7 @@ class Employee:
 
 # Object object
 emp1 = Employee("Maul", 20, 80000000)
+emp2 = Employee("Yoo", 22, 70000000)
 
 # Panggil Method
 emp1.info()
@@ -52,7 +53,8 @@ emp1.apply_raise(10) # Naikkan gaji 10%
 emp1.info()
 
 # Cetak gaji awal dengan get_salary()
-print(f"Gaji awal: {emp1.get_salary()}")
+print(f"Gaji awal {emp1.name}: {emp1.get_salary()}")
+print(f"Gaji awal {emp2.name}: {emp2.get_salary()}")
 
 # Ubah gaji dengan set_salary() → coba input angka positif & negatif.
 emp1.set_salary(90000000) # Gaji baru
