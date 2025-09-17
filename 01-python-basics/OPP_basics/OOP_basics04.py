@@ -32,7 +32,8 @@ class Employee:
         self._salary += self._salary * percent / 100
         print(f"Gaji {self.name} naik sebesar {percent}%. Gaji baru:")
 
-    employee_list = []
+    employee_list = [] # class variable untuk menyimpan daftar karyawan
+
     def add_employee(self, employee_list):
         for employee in self.employee_list:
             if employee.name == self.name:
@@ -49,7 +50,6 @@ emp1 = Employee("Maul", 20, 80000000)
 emp1.info()
 emp1.apply_raise(10) # Naikkan gaji 10%
 emp1.info()
-
 
 # Cetak gaji awal dengan get_salary()
 print(f"Gaji awal: {emp1.get_salary()}")
