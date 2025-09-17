@@ -30,7 +30,7 @@ class Employee:
             print("❌ Umur tidak boleh kurang dari 18!")
     def apply_raise(self, percent):
         self._salary += self._salary * percent / 100
-        print(f"Gaji {self.name} naik sebesar {percent}%. Gaji baru:")
+        print(f"Gaji {self.name} naik sebesar {percent}%. Update gaji baru:")
 
     employee_list = [] # class variable untuk menyimpan daftar karyawan
 
