@@ -49,6 +49,7 @@ emp2 = Employee("Yoo", 22, 70000000)
 
 # Panggil Method
 emp1.info()
+emp2.info()
 emp1.apply_raise(10) # Naikkan gaji 10%
 emp1.info()
 
