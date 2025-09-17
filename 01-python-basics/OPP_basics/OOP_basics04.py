@@ -34,7 +34,7 @@ class Employee:
 
     employee_list = [] # class variable untuk menyimpan daftar karyawan
 
-    def add_employee(self, employee_list):
+    def add_employee(self, employee):
         for employee in self.employee_list:
             if employee.name == self.name:
                 print("❌ Karyawan sudah ada!")
