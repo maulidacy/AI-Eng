@@ -61,6 +61,9 @@ print(f"Gaji awal {emp2.name}: {emp2.get_salary()}")
 emp1.set_salary(90000000) # Gaji baru
 emp1.set_salary(-1000000)
 
+emp1._salary = 50000000  # langsung ubah atribut _salary (bypass setter)
+emp1.info()              # cek
+
 # Periksa apakah atribut _salary benar-benar berubah.
 emp1.info()
 
