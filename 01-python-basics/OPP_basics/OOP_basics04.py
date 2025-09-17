@@ -20,8 +20,6 @@ class Employee:
             print(f"Gaji {self.name} diperbarui menjadi {self._salary}")
         else:
             print("❌ Gaji tidak boleh negatif!")
-
-
     def get_age(self):
         return self._age
 
@@ -30,13 +28,11 @@ class Employee:
             self._age = new_age
         else:
             print("❌ Umur tidak boleh kurang dari 18!")
-
     def apply_raise(self, percent):
         self._salary += self._salary * percent / 100
         print(f"Gaji {self.name} naik sebesar {percent}%. Gaji baru:")
 
     employee_list = []
-    
     def add_employee(self, employee_list):
         for employee in self.employee_list:
             if employee.name == self.name:
