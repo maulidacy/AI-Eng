@@ -45,7 +45,7 @@ class Employee:
 
 # Object object
 emp1 = Employee("Maul", 20, 80000000)
-emp2 = Employee("Yoo", 22, 70000000)
+emp2 = Employee("Yoo", 30, 70000000)
 
 # Panggil Method
 emp1.info()
