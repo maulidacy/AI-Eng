@@ -4,6 +4,12 @@ class BankAccount:
         self.account_holder = account_holder
         self._balance = balance  # protected attribute
 
+    def deposit(self, amount):
+        if amount > 0:
+            self._balance += amount
+            print(f"Deposited {amount}. New balance is {self._balance}.")
+        else:
+            print("Deposit amount must be positive.")
 
 #======================================================================================================
 class Employee:
