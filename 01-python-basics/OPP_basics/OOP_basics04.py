@@ -1,4 +1,8 @@
 class BankAccount:
+    def __init__(self, account_number, account_holder, balance=0):
+        self.account_number = account_number
+        self.account_holder = account_holder
+        self._balance = balance  # protected attribute
 
 
 #======================================================================================================
