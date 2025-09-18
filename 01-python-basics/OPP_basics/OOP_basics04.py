@@ -11,6 +11,13 @@ class BankAccount:
         else:
             print("Deposit amount must be positive.")
 
+    def withdraw(self, amount):
+        if 0 < amount <= self._balance:
+            self._balance -= amount
+            print(f"Withdrew {amount}. New balance is {self._balance}.")
+        else:
+            print("Invalid withdrawal amount.")
+
 #======================================================================================================
 class Employee:
     def __init__(self, name, age, salary):
