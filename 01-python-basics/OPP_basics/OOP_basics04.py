@@ -20,7 +20,16 @@ class BankAccount:
     
     def get_balance(self): # getter method
         return self._balance
+    
+# Object object
+acc1 = BankAccount("123456789", "Maul")
 
+# Panggil Method
+acc1.deposit(500000) # Deposit 500000
+acc1.withdraw(2000000) # Withdraw 2000000
+print(f"Balance: {acc1.get_balance()}") # Cek balance dengan getter
+
+exit()
 #======================================================================================================
 class Employee:
     def __init__(self, name, age, salary):
