@@ -25,9 +25,9 @@ class BankAccount:
 acc1 = BankAccount("123456789", "Maul")
 
 # Panggil Method
-acc1.deposit(500000) # Deposit 500000
-acc1.withdraw(2000000) # Withdraw 2000000
-print(f"Balance: {acc1.get_balance()}") # Cek balance dengan getter
+acc1.deposit(500000)   # saldo: 500000
+acc1.withdraw(2000000) # gagal, saldo tidak cukup
+print(f"Balance: {acc1.get_balance()}") # cek saldo dengan getter
 
 exit()
 #======================================================================================================
