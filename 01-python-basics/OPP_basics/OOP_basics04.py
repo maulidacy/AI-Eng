@@ -1,5 +1,5 @@
 class BankAccount:
-    def __init__(self, account_number, account_holder, balance=0):
+    def __init__(self, account_number, account_holder, balance=0): # nilai default 0
         self.account_number = account_number
         self.account_holder = account_holder
         self._balance = balance  # protected attribute
@@ -30,6 +30,7 @@ acc1.withdraw(2000000) # gagal, saldo tidak cukup
 print(f"Balance: {acc1.get_balance()}") # cek saldo dengan getter
 
 exit()
+
 #======================================================================================================
 class Employee:
     def __init__(self, name, age, salary):
