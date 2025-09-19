@@ -11,3 +11,9 @@ class Employee:
 
     def info(self):
         print(f"{self.name}, gaji: {self.salary}")
+
+# Child class (subclass)
+class Manager(Employee):
+    def __init__(self, name, salary, team_size):
+        super().__init__(name, salary) # panggil constructor parent class
+        self.team_size = team_size
