@@ -40,5 +40,6 @@ emp1.info()
 
 # method bonus tidak ada di kelas Employee
 # emp1.bonus(500000) # Error
+# Karena Employee tidak punya method bonus, bisa langsung ubah salary secara manual
 emp1.salary += 500000
 emp1.info()
