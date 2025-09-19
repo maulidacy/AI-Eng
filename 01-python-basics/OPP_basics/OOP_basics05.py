@@ -21,3 +21,7 @@ class Manager(Employee):
     # Override method
     def info(self):
         print(f"{self.name}, gaji: {self.salary}, memimpin tim: {self.team_size} orang")
+
+# Buat objek dari kelas Employee
+emp1 = Employee("Alice", 7000000)
+emp1.info()
