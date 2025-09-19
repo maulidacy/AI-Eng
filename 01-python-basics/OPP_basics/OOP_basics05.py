@@ -1,7 +1,6 @@
 #========================================== Inheritance ==========================================
-# Inheritance adalah konsep OOP yang memungkinkan sebuah kelas (class) untuk mewarisi atribut dan metode dari kelas lain.
-# Ini memungkinkan untuk membuat hierarki kelas dan mempromosikan penggunaan kembali kode (code reusability).
-# Kelas yang mewarisi disebut subclass (kelas turunan), sedangkan kelas yang diwarisi disebut superclass (kelas induk).
+# Inheritance = pewarisan atribut & method dari class induk (superclass) ke class anak (subclass).
+# Tujuannya: hierarki class + code reusability.
 
 # Parent class (superclass)
 class Employee:
@@ -11,6 +10,10 @@ class Employee:
 
     def info(self):
         print(f"{self.name}, gaji: {self.salary}")
+    
+    def bonus(self, amount):
+        self.salary += amount
+        print(f"Gaji {self.name} setelah bonus: {self.salary}")
 
 # Child class (subclass)
 class Manager(Employee):
@@ -23,6 +26,11 @@ class Manager(Employee):
         print(f"{self.name}, gaji: {self.salary}, memimpin tim: {self.team_size} orang")
 
 class Intern(Employee):
+    def bonus(self, amount):
+        # misal intern hanya boleh dapat setengah dari bonus
+        self.salary += amount / 2
+        print(f"Gaji {self.name} setelah bonus (intern): {self.salary}")
+
     def __init__(self, name, salary, duration):
         super().__init__(name, salary)
         self.duration = duration  # dalam bulan
@@ -30,16 +38,9 @@ class Intern(Employee):
     def info(self):
         print(f"{self.name}, gaji: {self.salary}, magang selama: {self.duration} bulan")
 
-    def bonus(self, amount):
-        self.salary += amount
-        print(f"Gaji {self.name} setelah bonus: {self.salary}")
-
 # Buat objek dari kelas Employee
 emp1 = Employee("Alice", 7000000)
 emp1.info()
 
-# method bonus tidak ada di kelas Employee
-# emp1.bonus(500000) # Error
-# Karena Employee tidak punya method bonus, bisa langsung ubah salary secara manual
-emp1.salary += 500000
-emp1.info()
+# method bonus dari class Employee
+emp1.bonus(500000)
