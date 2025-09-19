@@ -22,6 +22,23 @@ class Manager(Employee):
     def info(self):
         print(f"{self.name}, gaji: {self.salary}, memimpin tim: {self.team_size} orang")
 
+class Intern(Employee):
+    def __init__(self, name, salary, duration):
+        super().__init__(name, salary)
+        self.duration = duration  # dalam bulan
+
+    def info(self):
+        print(f"{self.name}, gaji: {self.salary}, magang selama: {self.duration} bulan")
+
+    def bonus(self, amount):
+        self.salary += amount
+        print(f"Gaji {self.name} setelah bonus: {self.salary}")
+
 # Buat objek dari kelas Employee
 emp1 = Employee("Alice", 7000000)
+emp1.info()
+
+# method bonus tidak ada di kelas Employee
+# emp1.bonus(500000) # Error
+emp1.salary += 500000
 emp1.info()
