@@ -1,3 +1,8 @@
+#========================================== Encapsulation ==========================================
+# Enkapsulasi adalah konsep OOP yang membungkus data (atribut) dan metode (fungsi) yang beroperasi pada data tersebut
+# menjadi satu unit yang disebut kelas (class). Enkapsulasi membantu melindungi data dari akses langsung dari luar kelas
+# dan memungkinkan kontrol yang lebih baik terhadap bagaimana data tersebut diakses dan dimodifikasi.   
+
 class BankAccount:
     def __init__(self, account_number, account_holder, balance=0): # nilai default 0
         self.account_number = account_number
