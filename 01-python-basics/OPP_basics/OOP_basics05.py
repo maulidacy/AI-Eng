@@ -38,9 +38,19 @@ class Intern(Employee):
     def info(self):
         print(f"{self.name}, gaji: {self.salary}, magang selama: {self.duration} bulan")
 
+class Engineer(Employee):
+    def languages(self, langs):
+        print(f"{self.name} sedang coding dengan bahasa {', '.join(langs)}")
+
 # Buat objek dari kelas Employee
 emp1 = Employee("Alice", 7000000)
 emp1.info()
 
 # method bonus dari class Employee
 emp1.bonus(500000)
+
+# Buat objek dari class Engineer
+eng1 = Engineer("Bob", 8000000)
+eng1.info()
+
+eng1.languages(["Python", "JavaScript"])
