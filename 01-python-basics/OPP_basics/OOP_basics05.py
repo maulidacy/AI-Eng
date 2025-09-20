@@ -48,7 +48,7 @@ emp1 = Employee("Alice", 7000000)
 emp1.info()
 
 # Buat objek dari class Manager
-mgr1 = Manager("Bob", 10000000, 5)
+mgr1 = Manager("Yoo", 10000000, 5)
 mgr1.info()
 
 # method bonus dari class Employee
