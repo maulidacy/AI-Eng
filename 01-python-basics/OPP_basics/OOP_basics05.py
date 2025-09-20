@@ -40,7 +40,7 @@ class Intern(Employee):
 
 class Engineer(Employee):
     def languages(self, langs):
-        print(f"{self.name} sedang coding dengan bahasa {', '.join(langs)}")
+        print(f"{self.name} menguasai bahasa {', '.join(langs)}") # , ".join(langs) akan mengubah list itu jadi string yang rapi dipisahkan koma.
 
 # Buat objek dari kelas Employee
 emp1 = Employee("Alice", 7000000)
