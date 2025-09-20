@@ -59,3 +59,17 @@ eng1 = Engineer("Bob", 8000000)
 eng1.info()
 
 eng1.languages(["Python", "JavaScript"])
+
+# Buat list employees
+employees = [
+    Manager("Charlie", 12000000, 10),       # Manager
+    Engineer("David", 9000000, "Python"),   # Engineer
+    Engineer("Eva", 6000000, "Java"),       # Employee
+    Intern("Eve", 3000000, 6)               # Intern
+]
+
+# Loop semua karyawan
+for emp in employees:
+    emp.info()  # Panggil method info() sesuai class masing-masing
+    if isinstance(emp, Engineer):
+        emp.languages()  # Panggil method languages() hanya untuk Engineer
