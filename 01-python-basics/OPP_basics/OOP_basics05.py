@@ -35,8 +35,9 @@ class Intern(Employee):
         super().__init__(name, salary)
         self.duration = duration  # dalam bulan
 
+    # Override method
     def info(self):
-        print(f"{self.name}, gaji: {self.salary}, magang selama: {self.duration} bulan")
+        print(f"{self.name}, gaji: {self.salary}, status: intern selama {self.duration} bulan")
 
 class Engineer(Employee):
     def languages(self, langs):
