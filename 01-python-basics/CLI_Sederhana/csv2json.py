@@ -3,6 +3,16 @@ from pathlib import Path
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
+def read_csv(path: Path) -> list[dict]:
+    '''Membaca file CSV dan mengembalikan list of dictionary'''
+    try:
+        with path.open as f:
+            return list(csv.DictReader(f))
+    except Exception as e:
+        logging.error("Gagal membaca file CSV: %s", e)
+        sys.exit(1)
+    
+
 exit()
 #=================================== CSV to JSON ==================================
 import csv, json
