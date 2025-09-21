@@ -1,19 +1,27 @@
-import csv, json, argparse, logging, sys
+import csv
+import json
+import argparse
+import logging
+import sys
 from pathlib import Path
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+# Konfigurasi logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s"
+)
 
 def read_csv(path: Path) -> list[dict]:
-    '''Membaca file CSV dan mengembalikan list of dictionary'''
+    """Membaca file CSV dan mengembalikan list of dictionary"""
     try:
-        with path.open as f:
+        with path.open("r", encoding="utf-8") as f:
             return list(csv.DictReader(f))
     except Exception as e:
         logging.error("Gagal membaca file CSV: %s", e)
         sys.exit(1)
 
 def validate(rows: list[dict], required: list[str]) -> list[dict]:
-    '''Memvalidasi apakah semua kolom yang dibutuhkan ada di setiap baris'''
+    """Memvalidasi apakah semua kolom yang dibutuhkan ada di setiap baris"""
     for i, row in enumerate(rows):
         missing = [col for col in required if col not in row or not row[col]]
         if missing:
@@ -22,15 +30,19 @@ def validate(rows: list[dict], required: list[str]) -> list[dict]:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Convert CSV to JSON")
-    parser.add_argument("src", help="path ke file CSV")
-    parser.add_argument("dst", help="path ke file JSON output")
-    parser.add_argument("--req", nargs="*", default=[], help="kolom wajib")
+    parser.add_argument("src", help="Path ke file CSV")
+    parser.add_argument("dst", help="Path ke file JSON output")
+    parser.add_argument("--req", nargs="*", default=[], help="Kolom wajib")
     args = parser.parse_args()
 
+    # Baca dan validasi CSV
     rows = read_csv(Path(args.src)) 
     rows = validate(rows, args.req)
-    Path(args.dst).write_text(json.dumps(rows, indent=2, ensure_ascii=False))
+
+    # Simpan hasil ke JSON
+    Path(args.dst).write_text(json.dumps(rows, indent=2, ensure_ascii=False), encoding="utf-8")
     logging.info("Berhasil konversi %d baris", len(rows))
+
 exit()
 
 #=================================== CSV to JSON ==================================
