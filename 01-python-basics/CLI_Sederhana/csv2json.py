@@ -1,8 +1,10 @@
+#=================================== CSV to JSON ==================================
 import csv, json
 from pathlib import Path
 
-# Fix the path to point to the correct location of the CSV file
-path = Path("../csv/Titanic-Dataset.csv")
+# Path relatif terhadap file script ini
+BASE_DIR = Path(__file__).resolve().parent
+path = BASE_DIR.parent / "csv" / "Titanic-Dataset.csv"
 
 '''
 path.open() membuka file CSV.
