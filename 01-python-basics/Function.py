@@ -5,6 +5,15 @@
 # sapa("Budi")  # Budi = argumen (nilai yang dikirim saat fungsi dipanggil)
 # print(dir(str)) //cek semua fungsi bawaan dari tipe data string
 
+#----------------------------- Hitung Faktorial ----------------------------
+def hitung_faktorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * hitung_faktorial(n - 1)
+
+print(hitung_faktorial(5))
+exit()
 #----------------------------- Rata-Rata nilai siswa ----------------------------
 siswa = {
     "Andi": [80, 90, 75],
