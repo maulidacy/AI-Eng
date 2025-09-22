@@ -5,6 +5,22 @@
 # sapa("Budi")  # Budi = argumen (nilai yang dikirim saat fungsi dipanggil)
 # print(dir(str)) //cek semua fungsi bawaan dari tipe data string
 
+#----------------------------- Rata-Rata nilai siswa ----------------------------
+siswa = {
+    "Andi": [80, 90, 75],
+    "Budi": [85, 70, 80],   
+    "Cindy": [90, 85, 95]
+}
+
+def rata_rata(nilai: list[int]) -> float:
+    """Fungsi untuk menghitung rata-rata dari daftar nilai"""
+    return sum(nilai) / len(nilai)
+
+for nama, nilai in siswa.items():
+
+    print(nama, "rata-rata =", rata_rata(nilai))
+exit()
+
 #----------------------------- Hitung Jumlah Huruf Vokal ----------------------------
 def hitung_vokal(kalimat: str) -> int:
     """Fungsi untuk menghitung jumlah huruf vokal dalam sebuah kalimat."""
