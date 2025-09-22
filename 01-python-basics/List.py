@@ -1,4 +1,10 @@
-#------------------------Cetak semua nama yang panjangnya > 4 huruf------------------------
+number = [10, 20, 30, 40, 50]
+
+for n in number:
+    print(n**2)
+exit()  
+
+# ------------------------Cetak semua nama yang panjangnya > 4 huruf------------------------
 names = ["Ayu", "Budi", "Citra", "Dodi", "Eka", "Fajar"]
 
 print("Cetak hanya nama yang panjangnya > 4 huruf:")
