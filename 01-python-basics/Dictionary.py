@@ -4,6 +4,19 @@
 # Nilai dari key bisa berupa tipe data apa saja, termasuk string, integer, list, atau bahkan dictionary itu sendiri.
 # Untuk mengakses nilai, kita menggunakan key yang sesuai.
 
+# Contoh dictionary
+person = {
+    "Name" : "Maul", 
+    "Age" : 20, 
+    "City" : "Grobogan", 
+    "Hobby" : ["Membaca", "Coding", "Traveling"],
+}
+
+for key, value in person.items(): # .items() mengembalikan pasangan (key, value) dalam bentuk tuple
+    print(f"{key}: {value}")    
+exit()
+
+#----------------------------------Menggunakan pandas untuk manipulasi data dalam bentuk tabel----------------------------------
 import pandas as pd
 
 person = {
