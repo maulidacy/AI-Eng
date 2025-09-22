@@ -5,6 +5,18 @@
 # sapa("Budi")  # Budi = argumen (nilai yang dikirim saat fungsi dipanggil)
 # print(dir(str)) //cek semua fungsi bawaan dari tipe data string
 
+#----------------------------- Cek Polidrom ----------------------------
+def is_polidrom(kata: str) -> bool:
+    """Fungsi untuk memeriksa apakah kata adalah polidrom."""
+    kata = kata.lower()
+    return kata == kata[::-1]  # bandingkan kata dengan kebalikannya
+
+print(is_polidrom("Kasur rusak"))  # True
+print(is_polidrom("Python"))        # False
+
+exit()
+
+#---------------------------- Fungsi Menghitung Luas Persegi ----------------------------
 def luas_persegi(sisi):
     return sisi * sisi
 
