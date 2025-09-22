@@ -5,6 +5,18 @@
 # sapa("Budi")  # Budi = argumen (nilai yang dikirim saat fungsi dipanggil)
 # print(dir(str)) //cek semua fungsi bawaan dari tipe data string
 
+#----------------------------- Hitung Jumlah Huruf Vokal ----------------------------
+def hitung_vokal(kalimat: str) -> int:
+    """Fungsi untuk menghitung jumlah huruf vokal dalam sebuah kalimat."""
+    vokal = "aiueo"
+    count = 0
+    for huruf in kalimat.lower():  # gunakan lower() agar tidak sensitif terhadap kapital
+        if huruf in vokal:
+            count += 1
+    return count
+
+print(hitung_vokal("Saya suka belajar Python"))  # Output: 10
+exit()  
 #----------------------------- Cek Polidrom ----------------------------
 def is_polidrom(kata: str) -> bool:
     """Fungsi untuk memeriksa apakah kata adalah polidrom."""
