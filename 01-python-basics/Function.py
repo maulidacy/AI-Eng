@@ -5,6 +5,12 @@
 # sapa("Budi")  # Budi = argumen (nilai yang dikirim saat fungsi dipanggil)
 # print(dir(str)) //cek semua fungsi bawaan dari tipe data string
 
+def luas_persegi(sisi):
+    return sisi * sisi
+
+print("Luas persegi adalah:", luas_persegi(5))
+exit()
+
 #---------------------------- Fungsi yang Menerima Argumen ----------------------------
 def is_adult(age):
     return age >= 18
