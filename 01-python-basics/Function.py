@@ -15,6 +15,20 @@ def read_csv(file_path):
         print(f"File {file_path} tidak ditemukan.")
         sys.exit(1)
 
+def validate(rows, required):
+    for i, row in enumerate(rows):
+        for col in required:
+            if col not in row or row[col] == "":
+                print(f"Baris {i+1} tidak valid: kolom '{col}' hilang atau kosong.")
+    return rows
+
+def save_json(rows, path):
+    with open(path, "w") as f:
+        json.dump(rows, f, indent=2, ensure_ascii=False)
+
+    
+            
+
 #----------------------------- Hitung Faktorial ----------------------------
 def hitung_faktorial(n):
     if n == 0 or n == 1:
