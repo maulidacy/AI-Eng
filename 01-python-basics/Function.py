@@ -5,6 +5,16 @@
 # sapa("Budi")  # Budi = argumen (nilai yang dikirim saat fungsi dipanggil)
 # print(dir(str)) //cek semua fungsi bawaan dari tipe data string
 
+import csv, json, sys
+
+def read_csv(file_path):
+    try:
+        with open(file_path) as f:
+            return list(csv.DictReader(f))
+    except FileNotFoundError:
+        print(f"File {file_path} tidak ditemukan.")
+        sys.exit(1)
+
 #----------------------------- Hitung Faktorial ----------------------------
 def hitung_faktorial(n):
     if n == 0 or n == 1:
