@@ -13,7 +13,7 @@ def read_csv(file_path):
             return list(csv.DictReader(f))
     except FileNotFoundError:
         print(f"File {file_path} tidak ditemukan.")
-        sys.exit(1)
+        sys.exit(1) # keluar dari program dengan kode error 1
 
 def validate(rows, required):
     for i, row in enumerate(rows):
@@ -27,9 +27,9 @@ def save_json(rows, path):
         json.dump(rows, f, indent=2, ensure_ascii=False)
 
 if __name__ == "__main__":
-    rows = read_csv("../csv/Titanic-Dataset.csv")
+    rows = read_csv("C:/Coding/AI-Eng/01-python-basics/csv/Titanic-Dataset.csv") # ambil file csv dari folder csv
     rows = validate(rows, ["Name", "Age"])
-    save_json(rows, "../json/Titanic-Dataset.json")
+    save_json(rows, "Titanic-Dataset.json")
     print("Konversi CSV ke JSON selesai!")
 exit()
 
@@ -41,7 +41,6 @@ def hitung_faktorial(n):
         return n * hitung_faktorial(n - 1)
 
 print(hitung_faktorial(5))
-exit()
 #----------------------------- Rata-Rata nilai siswa ----------------------------
 siswa = {
     "Andi": [80, 90, 75],
@@ -56,7 +55,6 @@ def rata_rata(nilai: list[int]) -> float:
 for nama, nilai in siswa.items():
 
     print(nama, "rata-rata =", rata_rata(nilai))
-exit()
 
 #----------------------------- Hitung Jumlah Huruf Vokal ----------------------------
 def hitung_vokal(kalimat: str) -> int:
