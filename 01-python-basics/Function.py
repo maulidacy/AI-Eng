@@ -28,7 +28,10 @@ def save_json(rows, path):
 
 if __name__ == "__main__":
     rows = read_csv("../csv/Titanic-Dataset.csv")
-    
+    rows = validate(rows, ["Name", "Age"])
+    save_json(rows, "../json/Titanic-Dataset.json")
+    print("Konversi CSV ke JSON selesai!")
+exit()
 
 #----------------------------- Hitung Faktorial ----------------------------
 def hitung_faktorial(n):
