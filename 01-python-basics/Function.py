@@ -26,8 +26,9 @@ def save_json(rows, path):
     with open(path, "w") as f:
         json.dump(rows, f, indent=2, ensure_ascii=False)
 
+if __name__ == "__main__":
+    rows = read_csv("../csv/Titanic-Dataset.csv")
     
-            
 
 #----------------------------- Hitung Faktorial ----------------------------
 def hitung_faktorial(n):
