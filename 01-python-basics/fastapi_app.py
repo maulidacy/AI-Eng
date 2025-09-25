@@ -1,3 +1,4 @@
+#--------------------------------- API prediksi dengan FastAPI ---------------------------------
 from fastapi import FastAPI
 import logging
 
@@ -11,5 +12,5 @@ def ppredict(x: int):
         logging.warning(f"Input negatif, hasil mungkin tidak valid")
     y = x * 2
     logging.info(f"Hasil prediksi: {y}")
-    return{"hasil": y}
+    return {"hasil": y}
     
