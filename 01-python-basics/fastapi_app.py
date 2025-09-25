@@ -1,3 +1,12 @@
+#---------------------------------- Model Training -----------------------------------
+import logging
+logging.basicConfig(level=logging.INFO)
+
+for epoch in range(1, 6):
+    loss = 1 / epoch
+    logging.info(f"Epoch {epoch}, loss={loss:.4f}")
+
+exit()
 #--------------------------------- API prediksi dengan FastAPI ---------------------------------
 from fastapi import FastAPI
 import logging
