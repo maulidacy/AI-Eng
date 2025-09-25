@@ -1,4 +1,6 @@
 import random
+import logging
+logging.basicConfig(level=logging.INFO)
 
 # Langkah 1: Inisialisasi Game
 # Komputer memilih satu angka acak dari 1 sampai 10.
