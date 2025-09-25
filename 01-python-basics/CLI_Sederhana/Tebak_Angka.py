@@ -22,12 +22,12 @@ while not sudah_benar:
 
         # Langkah 4: Logika Pengecekan
         if tebakan < angka_rahasia:
-            print("Tebakan terlalu kecil!")
+            logging.info("Tebakan terlalu kecil!")
         elif tebakan > angka_rahasia:
-            print("Tebakan terlalu besar!")
+            logging.info("Tebakan terlalu besar!")
         else:
-            print("Selamat! Tebakan Anda benar!")
+            logging.info("Selamat! Tebakan Anda benar!")
             # Ubah nilai `sudah_benar` menjadi True agar loop berhenti
             sudah_benar = True
     except ValueError:
-        print("Input tidak valid. Harap masukkan angka bulat.")
+        logging.error("Input tidak valid. Harap masukkan angka bulat.")
