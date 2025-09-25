@@ -8,6 +8,7 @@ for epoch in range(1, 6):
 
 exit()
 #--------------------------------- API prediksi dengan FastAPI ---------------------------------
+# fastapi_app.py
 from fastapi import FastAPI
 import logging
 
