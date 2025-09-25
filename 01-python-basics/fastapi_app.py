@@ -1,3 +1,18 @@
+#---------------------------------- Sistem Keamanan -----------------------------------
+import logging
+logging.basicConfig(level=logging.INFO)
+
+def login(user, password):
+    if password != "rahasia":
+        logging.error("Gagal login untuk user %s", user)
+        return False
+    logging.info("User %s berhasil login", user)
+    return True
+
+login("admin", "salah")
+login("admin", "rahasia")   
+
+exit()
 #---------------------------------- Model Training -----------------------------------
 import logging
 logging.basicConfig(level=logging.INFO)
