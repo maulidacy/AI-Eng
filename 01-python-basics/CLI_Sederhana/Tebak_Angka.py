@@ -10,8 +10,8 @@ angka_rahasia = random.randint(1, 10)
 # Variabel kontrol untuk perulangan
 sudah_benar = False
 
-print("Komputer telah memilih sebuah angka rahasia antara 1 dan 10.")
-print("Silakan tebak angkanya!")
+logging.info("Komputer telah memilih sebuah angka rahasia antara 1 dan 10.")
+logging.info("Silakan tebak angkanya!")
 
 # Langkah 2: Perulangan Utama (Loop)
 # Loop akan terus berjalan selama `sudah_benar` bernilai False
