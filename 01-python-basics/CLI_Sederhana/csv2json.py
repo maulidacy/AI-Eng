@@ -12,10 +12,11 @@ logging.basicConfig(
 def read_csv(path):
     """Membaca file CSV dan mengembalikan list of dictionary"""
     try:
-        with path.open("r", encoding="utf-8") as f:
-            return list(csv.DictReader(f))
-    except Exception as e:
-        logging.error("Gagal membaca file CSV: %s", e)
+       with open(path) as f:
+           logging.info(f"Membaca file {path}")
+           return list(csv.DictReader(f))
+    except FileNotFoundError:
+        logging.error(f"File tidak ditemukan: {path}")
         sys.exit(1)
 
 def validate(rows: list[dict], required: list[str]) -> list[dict]:
