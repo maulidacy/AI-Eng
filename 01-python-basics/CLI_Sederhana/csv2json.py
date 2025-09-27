@@ -27,21 +27,18 @@ def validate(rows, required):
                 logging.warning(f"Baris {i} kolom  '{col}' koaong!")
     return rows
 
+def save_json(data, path):
+    """Menyimpan data ke file JSON"""
+    with open(path, "w") as f:
+        json.dump(rows, f, indent=2, ensure_ascii=False)
+    logging.info(f"Berhasil simpan JSON ke {path}")
+
+
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Convert CSV to JSON")
-    parser.add_argument("src", help="Path ke file CSV")
-    parser.add_argument("dst", help="Path ke file JSON output")
-    parser.add_argument("--req", nargs="*", default=[], help="Kolom wajib")
-    args = parser.parse_args()
-
-    # Baca dan validasi CSV
-    rows = read_csv(Path(args.src)) 
-    rows = validate(rows, args.req)
-
-    # Simpan hasil ke JSON
-    Path(args.dst).write_text(json.dumps(rows, indent=2, ensure_ascii=False), encoding="utf-8")
-    logging.info("Berhasil konversi %d baris", len(rows))
-
+    rows = read_csv("data.csv")
+    rows = validate(rows, ["Name", "Age"])
+    save_json(rows, "data.json")    
+    logging.info(f {len(rows)} baris")
 exit()
 
 #=================================== CSV to JSON ==================================
