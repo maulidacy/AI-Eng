@@ -38,7 +38,7 @@ if __name__ == "__main__":
     rows = read_csv("data.csv")
     rows = validate(rows, ["Name", "Age"])
     save_json(rows, "data.json")    
-    logging.info(f {len(rows)} baris")
+    logging.info("Selesai konversi CSV -> JSON")
 exit()
 
 #=================================== CSV to JSON ==================================
