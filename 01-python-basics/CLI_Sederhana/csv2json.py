@@ -19,12 +19,12 @@ def read_csv(path):
         logging.error(f"File tidak ditemukan: {path}")
         sys.exit(1)
 
-def validate(rows: list[dict], required: list[str]) -> list[dict]:
+def validate(rows, required):
     """Memvalidasi apakah semua kolom yang dibutuhkan ada di setiap baris"""
     for i, row in enumerate(rows):
-        missing = [col for col in required if col not in row or not row[col]]
-        if missing:
-            logging.error("Row %d missing fields: %s", i, missing)
+        for col in required:
+            if col not in row or row[col] == "":
+                logging.warning(f"Baris {i} kolom  '{col}' koaong!")
     return rows
 
 if __name__ == "__main__":
