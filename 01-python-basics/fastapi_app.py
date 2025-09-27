@@ -1,4 +1,7 @@
 #--------------------------------- Logging Dasar -----------------------------------
+import logging
+
+# Atur format logging
 
 #---------------------------------- Sistem Keamanan -----------------------------------
 import logging
