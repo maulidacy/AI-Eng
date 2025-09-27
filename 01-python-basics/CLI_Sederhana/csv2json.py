@@ -35,7 +35,7 @@ def save_json(data, path):
 
 
 if __name__ == "__main__":
-    rows = read_csv("data.csv")
+    rows = read_csv("csv/Titanic-Dataset.csv")
     rows = validate(rows, ["Name", "Age"])
     save_json(rows, "data.json")    
     logging.info("Selesai konversi CSV -> JSON")
