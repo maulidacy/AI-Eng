@@ -1,17 +1,15 @@
 import csv
 import json
-import argparse
 import logging
 import sys
-from pathlib import Path
 
 # Konfigurasi logging
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s"
+    format="%(asctime)s: [%(levelname)s] %(message)s"
 )
 
-def read_csv(path: Path) -> list[dict]:
+def read_csv(path):
     """Membaca file CSV dan mengembalikan list of dictionary"""
     try:
         with path.open("r", encoding="utf-8") as f:
