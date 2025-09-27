@@ -4,8 +4,12 @@ import logging
 # Atur format logging
 logging.basicConfig(
     level=logging.INFO,
-    
+    format="%(asctime)s [%(levelname)s] %(message)s",
 )
+
+logging.info("Program dimulai")
+exit()
+
 #---------------------------------- Sistem Keamanan -----------------------------------
 import logging
 logging.basicConfig(level=logging.INFO)
