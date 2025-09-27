@@ -2,7 +2,10 @@
 import logging
 
 # Atur format logging
-
+logging.basicConfig(
+    level=logging.INFO,
+    
+)
 #---------------------------------- Sistem Keamanan -----------------------------------
 import logging
 logging.basicConfig(level=logging.INFO)
