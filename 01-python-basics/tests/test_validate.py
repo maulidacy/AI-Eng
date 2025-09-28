@@ -1,4 +1,4 @@
-from csv2json import validate
+from CLI_Sederhana.csv2json import validate
 
 def test_validate_pass():
     rows = [{"nama": "Andi", "umur": 20}, {"nama": "Budi", "umur": 25}]

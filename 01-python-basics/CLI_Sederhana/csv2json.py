@@ -21,25 +21,29 @@ def read_csv(path):
 
 def validate(rows, required):
     """Memvalidasi apakah semua kolom yang dibutuhkan ada di setiap baris"""
+    is_valid = True
     for i, row in enumerate(rows):
         for col in required:
             if col not in row or row[col] == "":
                 logging.warning(f"Baris {i} kolom  '{col}' kosong!")
-    return rows
+                is_valid = False
+    return is_valid
 
 def save_json(data, path):
     """Menyimpan data ke file JSON"""
     with open(path, "w") as f:
-        json.dump(rows, f, indent=2, ensure_ascii=False)
+        json.dump(data, f, indent=2, ensure_ascii=False)
     logging.info(f"Berhasil simpan JSON ke {path}")
 
 
 if __name__ == "__main__":
     rows = read_csv("csv/Titanic-Dataset.csv")
-    rows = validate(rows, ["Name", "Age"])
-    save_json(rows, "data.json")    
-    logging.info("Selesai konversi CSV -> JSON")
-exit()
+    if validate(rows, ["Name", "Age"]):
+        save_json(rows, "data.json")
+        logging.info("Selesai konversi CSV -> JSON")
+    else:
+        logging.error("Validasi gagal, tidak menyimpan file.")
+        sys.exit(1)
 
 #=================================== CSV to JSON ==================================
 import csv, json

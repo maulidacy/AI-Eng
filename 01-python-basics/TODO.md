@@ -1,0 +1,5 @@
+- [x] Modify the `validate` function in `CLI_Sederhana/csv2json.py` to return `True` if all rows have all required columns present and not empty, else `False`.
+- [x] Fix the `save_json` function to use `data` instead of `rows` in `json.dump`.
+- [x] Update the main block to check `if validate(rows, ["Name", "Age"]):` before saving.
+- [x] Remove the duplicate/unused code at the end of the file.
+- [x] Run tests to verify fixes.
