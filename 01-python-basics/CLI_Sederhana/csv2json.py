@@ -24,7 +24,7 @@ def validate(rows, required):
     for i, row in enumerate(rows):
         for col in required:
             if col not in row or row[col] == "":
-                logging.warning(f"Baris {i} kolom  '{col}' koaong!")
+                logging.warning(f"Baris {i} kolom  '{col}' kosong!")
     return rows
 
 def save_json(data, path):
