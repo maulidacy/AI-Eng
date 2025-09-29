@@ -8,9 +8,17 @@ data = {
 
 df = pd.DataFrame(data) # Membuat DataFrame dari dictionary, DataFrame adalah struktur data 2D seperti tabel
 print(df) # Menampilkan DataFrame ke layar
+
 #-------------------------- Load DataFrame dari CSV -------------------------
 # df = pd.read_csv("titanic.csv") # Membaca data dari file CSV dan menyimpannya dalam DataFrame
 # print(df) # Menampilkan DataFrame ke layar
+
+#-------------------------- Explore DataFrame -------------------------
+print(df.head()) # Menampilkan beberapa baris pertama dari DataFrame
+print(df.tail()) # Menampilkan beberapa baris terakhir dari DataFrame
+print(df.info()) # Menampilkan informasi ringkas tentang DataFrame, termasuk tipe data dan jumlah nilai non-null
+print(df.describe()) # Menampilkan statistik deskriptif dari kolom numerik dalam DataFrame
+print(df.columns) # Menampilkan nama-nama kolom dalam DataFrame
 
 #--------------------------Series-------------------------
 s = pd.Series([10, 20, 30], index=["a", "b", "c"]) # Membuat Series dari list dengan index khusus
