@@ -8,6 +8,9 @@ data = {
 
 df = pd.DataFrame(data) # Membuat DataFrame dari dictionary, DataFrame adalah struktur data 2D seperti tabel
 print(df) # Menampilkan DataFrame ke layar
+#-------------------------- Load DataFrame dari CSV -------------------------
+# df = pd.read_csv("titanic.csv") # Membaca data dari file CSV dan menyimpannya dalam DataFrame
+# print(df) # Menampilkan DataFrame ke layar
 
 #--------------------------Series-------------------------
 s = pd.Series([10, 20, 30], index=["a", "b", "c"]) # Membuat Series dari list dengan index khusus
