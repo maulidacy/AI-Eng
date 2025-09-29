@@ -13,3 +13,4 @@ data = {
 
 df = pd.DataFrame(data)
 logging.info("DataFrame dibuat dengan %d baris", len(df))
+print("DataFrame awal:", df, sep="\n")
