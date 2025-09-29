@@ -31,7 +31,7 @@ logging.info("Rata-rata nilai: %.2f", avg)
 print(f"Rata-rata nilai: {avg:.2f}")
 
 # ----------------------------------------- CHALLENGE -----------------------------------------
-# 1. '
+# 1. Buat DataFrame dari dictionary
 mahasiswa = {
     "nama": ["Andi", "Budi", "Citra", "Dewi", "Eka"],
     "jurusan": ["TI", "SI", "TI", "SI", "TI"],
