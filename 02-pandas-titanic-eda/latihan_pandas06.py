@@ -14,3 +14,9 @@ data = {
 df = pd.DataFrame(data)
 logging.info("DataFrame dibuat dengan %d baris", len(df))
 print("DataFrame awal:", df, sep="\n")
+
+# 2. Tambahkan kolom baru
+df["status"] = df["nilai"].apply(lambda x: "Lulus" if x >= 80 else "remidial")
+logging.info("Kolom status ditambahkan")
+print("DataFrame setelah menambahkan kolom status:", df, sep="\n")
+
