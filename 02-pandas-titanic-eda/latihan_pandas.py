@@ -20,6 +20,11 @@ print(df.info()) # Menampilkan informasi ringkas tentang DataFrame, termasuk tip
 print(df.describe()) # Menampilkan statistik deskriptif dari kolom numerik dalam DataFrame
 print(df.columns) # Menampilkan nama-nama kolom dalam DataFrame
 
+#-------------------------- Cleaning DataFrame -------------------------
+df = df.dropna() # Menghapus baris yang memiliki nilai NaN (kosong) dalam DataFrame, Missing values
+df = df.drop_duplicates() # Menghapus baris duplikat dalam DataFrame
+df = df.fillna(0) # Mengisi nilai NaN (kosong) dengan 0 dalam DataFrame
+
 #--------------------------Series-------------------------
 s = pd.Series([10, 20, 30], index=["a", "b", "c"]) # Membuat Series dari list dengan index khusus
 print(s) # Menampilkan Series ke layar
