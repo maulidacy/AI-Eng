@@ -28,6 +28,11 @@ df = df.fillna(0) # Mengisi nilai NaN (kosong) dengan 0 dalam DataFrame
 #-------------------------- Transformasi DataFrame -------------------------
 df["status"] = df["nilai"].apply(lambda x: "Lulus" if x >= 80 else "Remidial") # Menambahkan kolom baru 'status' berdasarkan kondisi pada kolom 'nilai'
 
+#-------------------------- Ready for ML -------------------------
+x = df["umur", "nilai"] # Fitur (features) untuk model machine learning
+y = df["status"] # Target (label) untuk model machine learning  
+# Hasil x dan y siap digunakan untuk pelatihan model machine learning (scikit-learn, TensorFlow, dll)
+
 #--------------------------Series-------------------------
 s = pd.Series([10, 20, 30], index=["a", "b", "c"]) # Membuat Series dari list dengan index khusus
 print(s) # Menampilkan Series ke layar
