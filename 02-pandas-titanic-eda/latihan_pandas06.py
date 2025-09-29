@@ -38,7 +38,11 @@ mahasiswa = {
     "ipk": [3.5, 3.8, 2.9, 3.2, 3.7]
 }
 
+df = pd.DataFrame(mahasiswa)
+
 # 2. Tambahkan kolom predikat
 df["predikat"] = df["ipk"].apply(lambda x: "Cumlaude" if x >= 3.5 else ("Memuaskan" if x >= 3.0 else "Cukup"))
+logging.info("Kolom predikat ditambahkan")
+print("DataFrame setelah menambahkan kolom predikat:", df, sep="\n")
 
 
