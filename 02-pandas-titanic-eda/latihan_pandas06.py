@@ -20,3 +20,7 @@ df["status"] = df["nilai"].apply(lambda x: "Lulus" if x >= 80 else "remidial")
 logging.info("Kolom status ditambahkan")
 print("DataFrame setelah menambahkan kolom status:", df, sep="\n")
 
+# 3. Filter data (umur > 20)
+df_filtered= df[df["umur"] > 20]
+logging.info("Filter umur > 20 menghasilkan %d baris", len(df_filtered))
+print("DataFrame setelah filter umur > 20:", df_filtered, sep="\n")
