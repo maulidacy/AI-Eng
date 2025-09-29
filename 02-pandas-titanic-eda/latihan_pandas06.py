@@ -45,4 +45,9 @@ df["predikat"] = df["ipk"].apply(lambda x: "Cumlaude" if x >= 3.5 else ("Memuask
 logging.info("Kolom predikat ditambahkan")
 print("DataFrame setelah menambahkan kolom predikat:", df, sep="\n")
 
+# 3. Filter data (jurusan TI)
+df_filtered = df[df["jurusan"] == "TI"]
+logging.info("Filter jurusan TI menghasilkan %d baris", len(df_filtered))    
+print("DataFrame setelah filter jurusan TI:", df_filtered, sep="\n")
+
 
