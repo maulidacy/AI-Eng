@@ -29,3 +29,12 @@ print("DataFrame setelah filter umur > 20:", df_filtered, sep="\n")
 avg = df["nilai"].mean()
 logging.info("Rata-rata nilai: %.2f", avg)
 print(f"Rata-rata nilai: {avg:.2f}")
+
+# ----------------------------------------- CHALLENGE -----------------------------------------
+# 1. '
+mahasiswa = {
+    "nama": ["Andi", "Budi", "Citra", "Dewi", "Eka"],
+    "jurusan": ["TI", "SI", "TI", "SI", "TI"],
+    "ipk": [3.5, 3.8, 2.9, 3.2, 3.7]
+}
+
