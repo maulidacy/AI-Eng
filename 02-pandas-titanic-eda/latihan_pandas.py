@@ -9,6 +9,9 @@ data = {
 df = pd.DataFrame(data) # Membuat DataFrame dari dictionary, DataFrame adalah struktur data 2D seperti tabel
 print(df) # Menampilkan DataFrame ke layar
 
+#--------------------------Series-------------------------
+
+
 #----------------------------------------------DASAR-------------------------------------------------
 print("\n===========================================")
 print("Menampilkan 3 baris pertama dari DataFrame:")
