@@ -10,7 +10,10 @@ df = pd.DataFrame(data) # Membuat DataFrame dari dictionary, DataFrame adalah st
 print(df) # Menampilkan DataFrame ke layar
 
 #--------------------------Series-------------------------
-
+s = pd.Series([10, 20, 30], index=["a", "b", "c"]) # Membuat Series dari list dengan index khusus
+print(s) # Menampilkan Series ke layar
+print("Ambil elemen b:", s["b"]) # Mengambil elemen dengan index "b" dari Series
+exit()
 
 #----------------------------------------------DASAR-------------------------------------------------
 print("\n===========================================")
