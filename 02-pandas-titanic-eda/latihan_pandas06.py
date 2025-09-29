@@ -24,3 +24,8 @@ print("DataFrame setelah menambahkan kolom status:", df, sep="\n")
 df_filtered= df[df["umur"] > 20]
 logging.info("Filter umur > 20 menghasilkan %d baris", len(df_filtered))
 print("DataFrame setelah filter umur > 20:", df_filtered, sep="\n")
+
+# 4. Hitung rata-rata nilai
+avg = df["nilai"].mean()
+logging.info("Rata-rata nilai: %.2f", avg)
+print(f"Rata-rata nilai: {avg:.2f}")
