@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 # 1. Buat DataFrame
 data = {
     "nama": ["Alice", "Bob", "Charlie", "David", "Eva"],
-    "umur": [20, 22, 19, 21],
+    "umur": [20, 22, 19, 21, 23],
     "nilai": [85, 90, 78, 60, 88]
 }
 
