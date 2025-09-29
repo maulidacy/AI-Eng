@@ -25,6 +25,9 @@ df = df.dropna() # Menghapus baris yang memiliki nilai NaN (kosong) dalam DataFr
 df = df.drop_duplicates() # Menghapus baris duplikat dalam DataFrame
 df = df.fillna(0) # Mengisi nilai NaN (kosong) dengan 0 dalam DataFrame
 
+#-------------------------- Transformasi DataFrame -------------------------
+df["status"] = df["nilai"].apply(lambda x: "Lulus" if x >= 80 else "Remidial") # Menambahkan kolom baru 'status' berdasarkan kondisi pada kolom 'nilai'
+
 #--------------------------Series-------------------------
 s = pd.Series([10, 20, 30], index=["a", "b", "c"]) # Membuat Series dari list dengan index khusus
 print(s) # Menampilkan Series ke layar
