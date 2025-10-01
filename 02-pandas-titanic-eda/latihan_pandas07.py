@@ -1,0 +1,5 @@
+"""
+- Membaca dataset dari CSV
+- Eksplorasi awal (EDA sederhana)
+- Menggunakan fungsi dasar: head(), info(), describe(), value_counts()
+"""
