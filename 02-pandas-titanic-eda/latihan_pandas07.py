@@ -19,3 +19,8 @@ print("5 baris pertama dataset:", df.head(), sep="\n")
 # Info umum
 print("\nInfo DataFrame:")
 print(df.info())
+
+# Statistik deskriptif
+print("\nStatistik Deskriptif:")
+print(df.describe())
+
