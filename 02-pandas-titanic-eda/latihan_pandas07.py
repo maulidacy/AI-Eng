@@ -24,3 +24,6 @@ print(df.info())
 print("\nStatistik Deskriptif:")
 print(df.describe())
 
+# Distribusi nilai pada kolom tertentu
+print("\nDistribusi nilai pada kolom 'Age':")
+print(df["Age"].value_counts().sort_index())
