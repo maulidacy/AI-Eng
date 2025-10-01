@@ -51,3 +51,6 @@ logging.info("Filter jurusan TI menghasilkan %d baris", len(df_filtered))
 print("DataFrame setelah filter jurusan TI:", df_filtered, sep="\n")
 
 # 4. Hitung rata-rata ipk
+avg_ipk = df["ipk"].mean()
+logging.info("Rata-rata IPK: %.2f", avg_ipk)
+print(f"Rata-rata IPK: {avg_ipk:.2f}")
