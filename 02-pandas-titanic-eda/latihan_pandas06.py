@@ -50,4 +50,4 @@ df_filtered = df[df["jurusan"] == "TI"]
 logging.info("Filter jurusan TI menghasilkan %d baris", len(df_filtered))    
 print("DataFrame setelah filter jurusan TI:", df_filtered, sep="\n")
 
-
+# 4. Hitung rata-rata ipk
