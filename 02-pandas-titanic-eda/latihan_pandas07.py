@@ -27,3 +27,7 @@ print(df.describe())
 # Distribusi nilai pada kolom tertentu
 print("\nDistribusi nilai pada kolom 'Age':")
 print(df["Age"].value_counts().sort_index())
+
+# Nilai unik pada kolom tertentu
+print("\nNilai unik pada kolom 'Embarked':")
+print(df["Embarked"].unique())
