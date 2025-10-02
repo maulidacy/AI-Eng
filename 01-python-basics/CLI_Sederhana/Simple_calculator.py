@@ -12,6 +12,8 @@ def kalkulator(a_str, b_str, operator):
     elif operator == "*":
         return a * b
     elif operator == "/":
+        if b == 0:
+            return "Error: Pembagian dengan nol tidak dapat dilakukan."
         return a / b
     else:
         return "Operator tidak valid"
