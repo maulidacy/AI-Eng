@@ -17,4 +17,9 @@ def kalkulator(a_str, b_str, operator):
         return a / b
     else:
         return "Operator tidak valid"
-        return "Input tidak valid"
+
+# contoh interaksi sederhana
+a = input("Masukkan angka pertama: ")
+b = input("Masukkan angka kedua: ")
+operator = input("Masukkan operator (+, -, *, /): ")
+print(f"{a} {operator} {b} = {kalkulator(a, b, operator)}")
