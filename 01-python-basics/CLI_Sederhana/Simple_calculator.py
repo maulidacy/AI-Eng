@@ -1,4 +1,7 @@
 # Simple calculator with validation
+import logging
+
+logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 def kalkulator(a_str, b_str, operator):
     try:
         a = float(a_str)
@@ -22,4 +25,4 @@ def kalkulator(a_str, b_str, operator):
 a = input("Masukkan angka pertama: ")
 b = input("Masukkan angka kedua: ")
 operator = input("Masukkan operator (+, -, *, /): ")
-print(f"{a} {operator} {b} = {kalkulator(a, b, operator)}")
+logging.info(f"{a} {operator} {b} = {kalkulator(a, b, operator)}")
