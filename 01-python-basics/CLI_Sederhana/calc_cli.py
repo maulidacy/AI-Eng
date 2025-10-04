@@ -18,3 +18,11 @@ if __name__ == "__main__":
             a = float(input("Masukkan angka pertama: "))
             b = float(input("Masukkan angka kedua: "))
             ops = {'+': add, '-': sub, '*': mul, '/': div}
+            if op in ops:
+                print("Hasil: ", ops[op](a, b))
+            else:
+                print("Operasi tidak valid.")
+        except ValueError:
+            print("Input tidak valid! Harap masukkan angka.")
+        except ZeroDivisionError as e:
+            print(e)
