@@ -17,7 +17,7 @@ if __name__ == "__main__":
     history = []  # simpan history di sini
     
     while True:
-        op = input("Pilih operasi [+, -, *, /] atau 'q' untuk keluar, 'h' untuk cek seluruh history: ").strip()
+        op = input("Pilih operasi [+, -, *, /] atau 'q' untuk keluar, 'h' untuk cek seluruh history, atau 'c' untuk menghapus history: ").strip()
         
         if op == 'q':
             print("Program selesai.")
@@ -30,6 +30,14 @@ if __name__ == "__main__":
                 for i, (a, op_hist, b, result) in enumerate(history, 1):
                     print(f"{i}. {a} {op_hist} {b} = {result}")
             continue  # kembali ke menu utama tanpa minta angka
+        elif op == 'c':
+            if not history:
+                print("Belum ada history.")
+                continue
+            else:
+                history.clear()
+                print("History berhasil dihapus.")
+            continue
 
         try:
             a = float(input("Masukkan angka pertama: "))
