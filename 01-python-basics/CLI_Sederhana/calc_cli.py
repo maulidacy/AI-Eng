@@ -19,7 +19,7 @@ if __name__ == "__main__":
             b = float(input("Masukkan angka kedua: "))
             ops = {'+': add, '-': sub, '*': mul, '/': div}
             if op in ops:
-                print("Hasil: ", ops[op](a, b))
+                print(f"Hasil: {a} {op} {b} = ", ops[op](a, b))
             else:
                 print("Operasi tidak valid.")
         except ValueError:
