@@ -13,3 +13,8 @@ if __name__ == "__main__":
     while True:
         op = input("Pilih operasi [+, -, *, /] atau 'q' untuk keluar: ").strip()
         if op == 'q':
+            break
+        try:
+            a = float(input("Masukkan angka pertama: "))
+            b = float(input("Masukkan angka kedua: "))
+            ops = {'+': add, '-': sub, '*': mul, '/': div}
