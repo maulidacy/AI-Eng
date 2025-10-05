@@ -10,3 +10,5 @@ print(df.head())
 
 # cek jumlah sample tiap class
 print(df['target'].value_counts())
+
+# 
