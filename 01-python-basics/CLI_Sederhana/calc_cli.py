@@ -16,7 +16,6 @@ def div(a, b):
         return "Error: Pembagian dengan nol tidak dapat dilakukan."
     return a / b
 
-
 if __name__ == "__main__":
     history = []  # simpan history di sini
     
