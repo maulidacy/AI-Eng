@@ -7,7 +7,8 @@ if __name__ == "__main__":
     history = []  # simpan history di sini
     
     while True:
-        op = input("Pilih operasi [+, -, *, /] atau 'q' untuk keluar, 'h' untuk cek seluruh history, atau 'c' untuk menghapus history: ").strip()
+        print("\n1. Pilih operasi [+, -, *, /] \n2. 'q' untuk keluar \n3. 'h' untuk cek seluruh history \n4. 'c' untuk menghapus history")
+        op = input("Masukkan operasi: ").strip()
         
         if op == 'q':
             print("Program selesai.")
