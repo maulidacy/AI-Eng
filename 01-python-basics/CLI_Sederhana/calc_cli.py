@@ -35,8 +35,9 @@ if __name__ == "__main__":
             if not history:
                 print("Belum ada history untuk dihapus.")
             else:
+                # Buka file history, kosongkan isinya, lalu tutup kembali.
                 history.clear()
-                open("history.txt", "w").close()  # hapus isi file juga
+                open("history.txt", "w").close()  # hapus isi file history
                 print("History berhasil dihapus.")
                 logging.info("History dihapus.")
             continue # untuk melanjutkan ke menu utama
