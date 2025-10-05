@@ -1,20 +1,7 @@
 import logging
+from calc_ops import add, sub, mul, div
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
-
-def add(a, b):
-    return a + b
-
-def sub(a, b):
-    return a - b
-
-def mul(a, b):
-    return a * b
-
-def div(a, b):
-    if b == 0:
-        return "Error: Pembagian dengan nol tidak dapat dilakukan."
-    return a / b
 
 if __name__ == "__main__":
     history = []  # simpan history di sini
@@ -32,6 +19,8 @@ if __name__ == "__main__":
                 print("History:")
                 for i, (a, op_hist, b, result) in enumerate(history, 1):
                     print(f"{i}. {a} {op_hist} {b} = {result}")
+            with open("history.txt", "a") as f:
+                f.write(f"{a} {op} {b} = {result}\n ")
             continue  # kembali ke menu utama tanpa minta angka
         elif op == 'c':
             if not history:
