@@ -18,3 +18,6 @@ model.fit(X_train, y_train)
 
 # PREDIKSI (predict)
 y_pred = model.predict(X_test)
+
+# evaluasi
+print("Akurasi:", accuracy_score(y_test, y_pred))
