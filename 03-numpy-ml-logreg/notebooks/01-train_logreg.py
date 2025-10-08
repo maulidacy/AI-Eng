@@ -16,7 +16,7 @@ model = LogisticRegression(max_iter=200)
 # LATIH MODEL (fit)
 model.fit(X_train, y_train)
 
-# PREDIKSI (predict)
+# PREDIKSI (predict) menggunakan model yang sudah dilatih
 y_pred = model.predict(X_test)
 
 # evaluasi
