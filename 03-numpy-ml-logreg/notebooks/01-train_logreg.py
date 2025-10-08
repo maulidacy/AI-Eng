@@ -11,8 +11,6 @@ print("Fitur: ", iris.feature_names)
 print("Kelas: ", iris.target_names)
 print("Ukuran dataset: ", X.shape)
 
-exit()
-
 # Split data (Training dan Testing)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_Size=0.2, random_state=42)
 
@@ -25,5 +23,6 @@ model.fit(X_train, y_train)
 # PREDIKSI (predict) menggunakan model yang sudah dilatih
 y_pred = model.predict(X_test)
 
-# evaluasi
-print("Akurasi:", accuracy_score(y_test, y_pred))
+# evaluasi model
+acc = accuracy_score(y_test, y_pred)
+print("Akurasi:", acc)
