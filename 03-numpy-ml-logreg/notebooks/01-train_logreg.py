@@ -17,7 +17,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # Inisiasi model (buat model)
 model = LogisticRegression(max_iter=200)
 
-# LATIH MODEL (fit)
+# LATIH MODEL (fit) menggunakan data training
 model.fit(X_train, y_train)
 
 # PREDIKSI (predict) menggunakan model yang sudah dilatih
