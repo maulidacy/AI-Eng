@@ -21,8 +21,7 @@ model = LogisticRegression(max_iter=200)
 model.fit(X_train, y_train)
 
 # PREDIKSI (predict) menggunakan model yang sudah dilatih
-y_pred = model.predict(X_test)
-
+y_pred = model.predict(X_test) # minta jawaban dari otak
 # evaluasi model
 acc = accuracy_score(y_test, y_pred)
 print("Akurasi:", acc)
