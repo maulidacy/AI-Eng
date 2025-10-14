@@ -1,3 +1,4 @@
+# Functions and Docstrings Exercise
 def triangle_area(base: float, height: float) -> float:
     """Return area of a tringle given base and height."""
     return 0.5 * base * height
