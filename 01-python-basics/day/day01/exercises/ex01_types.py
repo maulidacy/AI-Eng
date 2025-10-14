@@ -1,3 +1,4 @@
+# Type and Casting Exercis
 a = "3"
 b = 2
 c = int(a) + b
