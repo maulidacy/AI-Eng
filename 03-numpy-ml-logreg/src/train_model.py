@@ -8,3 +8,4 @@ def train_logreg(X, y, test_size=0.2, random_state=42):
     model = LogisticRegression(max_iter=200)
     model.fit(X_train, y_train)
     return model, X_test, y_test
+
