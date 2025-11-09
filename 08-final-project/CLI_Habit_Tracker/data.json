@@ -1,5 +1,15 @@
 {
   "habits": [
-    {"name": "minum air", "done_dates": ["2025-11-08", "2025-11-09"]}
+    {
+      "name": "minum air",
+      "done_dates": [
+        "2025-11-08",
+        "2025-11-09"
+      ]
+    },
+    {
+      "name": "Drink water",
+      "done_dates": []
+    }
   ]
 }
